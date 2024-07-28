@@ -9,6 +9,7 @@ import SignIn from '@screens/SignIn';
 import SignUp from '@screens/SignUp';
 import Welcome from '@screens/Welcome';
 import React, {useEffect, useState} from 'react';
+import {View} from 'react-native';
 
 const AuthenticationStack =
   createNativeStackNavigator<AuthenticationRootStack>();
@@ -18,14 +19,31 @@ export const Authentication = () => {
     keyof AuthenticationRootStack | undefined
   >();
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const checkInitialRoute = async () => {
-      const isActiveBoading = await AsyncStorage.getItem(ON_BOADING_KEY);
-      setInitialRouteName(!isActiveBoading ? Paths.OnBoarding : Paths.SignIn);
+      try {
+        const isActiveBoading =
+          (await AsyncStorage.getItem(ON_BOADING_KEY)) ?? 'false';
+        setInitialRouteName(
+          !isActiveBoading || isActiveBoading === 'false'
+            ? Paths.OnBoarding
+            : Paths.SignIn,
+        );
+      } catch (error) {
+        console.log('error', error);
+      } finally {
+        setLoading(false);
+      }
     };
 
     checkInitialRoute();
   });
+
+  if (loading) {
+    return <View />;
+  }
 
   return (
     <AuthenticationStack.Navigator
