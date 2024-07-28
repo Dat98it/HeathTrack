@@ -1,14 +1,18 @@
+import {DefaultTheme} from '@lib/theme';
 import HomeScreen from '@screens/Home';
 import React from 'react';
 import {SafeAreaView, Text} from 'react-native';
+import {PaperProvider} from 'react-native-paper';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <Text>Hello, React Native!</Text>
+    <PaperProvider theme={DefaultTheme}>
+      <SafeAreaView>
+        <Text>Hello, React Native!</Text>
 
-      <HomeScreen />
-    </SafeAreaView>
+        <HomeScreen />
+      </SafeAreaView>
+    </PaperProvider>
   );
 };
 
