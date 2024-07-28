@@ -1,11 +1,14 @@
+import HomeScreen from '@screens/Home';
 import React from 'react';
-import {View, Text} from 'react-native';
+import {SafeAreaView, Text} from 'react-native';
 
 const App = () => {
   return (
-    <View>
+    <SafeAreaView>
       <Text>Hello, React Native!</Text>
-    </View>
+
+      <HomeScreen />
+    </SafeAreaView>
   );
 };
 
