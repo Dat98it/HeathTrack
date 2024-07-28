@@ -12,17 +12,19 @@ import {
 import {combineReducers, configureStore} from '@reduxjs/toolkit';
 import {useDispatch} from 'react-redux';
 import {authSlice} from './reducer/auth';
+import {localeSlice} from './reducer/locale';
 
 const persistConfig = {
   key: 'RNApp',
   storage: AsyncStorage,
-  whitelist: [authSlice.name],
+  whitelist: [authSlice.name, localeSlice.name],
 };
 
 const persistedReducer = persistReducer(
   persistConfig,
   combineReducers({
     [authSlice.name]: authSlice.reducer,
+    [localeSlice.name]: localeSlice.reducer,
   }),
 );
 
