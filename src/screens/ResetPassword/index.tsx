@@ -1,12 +1,12 @@
 import React from 'react';
 import {SafeAreaView, Text} from 'react-native';
 
-const Home = () => {
+const ResetPassword = () => {
   return (
     <SafeAreaView>
-      <Text>Welcome to the Home Screen!</Text>
+      <Text>ResetPassword Component</Text>
     </SafeAreaView>
   );
 };
 
-export default Home;
+export default ResetPassword;

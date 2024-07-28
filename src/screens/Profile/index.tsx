@@ -1,12 +1,12 @@
 import React from 'react';
 import {SafeAreaView, Text} from 'react-native';
 
-const Home = () => {
+const Profile = () => {
   return (
     <SafeAreaView>
-      <Text>Welcome to the Home Screen!</Text>
+      <Text>Profile Component</Text>
     </SafeAreaView>
   );
 };
 
-export default Home;
+export default Profile;
