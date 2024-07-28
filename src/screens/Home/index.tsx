@@ -1,13 +1,12 @@
-import {GoogleIcon} from '@assets/index';
 import React from 'react';
-import {Text, View} from 'react-native';
+import {SafeAreaView, Text} from 'react-native';
 
 const HomeScreen = () => {
   return (
-    <View>
-      <GoogleIcon />
+    <SafeAreaView>
+      <Text>Home</Text>
       <Text>Welcome to the Home Screen!</Text>
-    </View>
+    </SafeAreaView>
   );
 };
 
