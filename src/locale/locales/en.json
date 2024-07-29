@@ -1,4 +1,8 @@
 {
+  "last_name": "Last name",
+  "last_name_description": "Enter your last name...",
+  "full_name": "Full name",
+  "full_name_description": "Enter your full name...",
   "app_version": "Version",
   "or": "or",
   "sign_out": "Sign Out",
@@ -21,7 +25,7 @@
   "sign_in": "Sign In",
   "goto_sign_in": "Go to sign in",
   "sign_in_description": "Log in to access your personalized Medinest experience",
-  "sign_up": "Signup",
+  "sign_up": "Sign Up",
   "sign_up_title": "Sign Up For Free",
   "sign_up_description": "Let’s experience the joy of telehealth Medinest \n All In One App",
   "forgot_password": "Forgot password"

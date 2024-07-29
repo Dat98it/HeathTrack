@@ -1,4 +1,8 @@
 {
+  "last_name": "Tên",
+  "last_name_description": "Tên...",
+  "full_name": "Họ",
+  "full_name_description": "Họ...",
   "app_version": "Phiên bản",
   "or": "hoặc",
   "sign_out": "Đăng xuất",
