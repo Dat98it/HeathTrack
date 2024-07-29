@@ -6,7 +6,7 @@ interface initialState {
 }
 
 const initialState: initialState = {
-  locale: 'vi',
+  locale: 'en',
 };
 
 export const localeSlice = createSlice({

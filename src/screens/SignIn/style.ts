@@ -7,7 +7,6 @@ export const makeStyles = (theme: AppTheme, inset: EdgeInsets) =>
     loginPage: {
       flex: 1,
       paddingTop: inset.top,
-
       backgroundColor: theme.colors.white,
     },
     container: {
@@ -15,24 +14,40 @@ export const makeStyles = (theme: AppTheme, inset: EdgeInsets) =>
       alignItems: 'center',
       paddingHorizontal: 20,
     },
+    header: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: 60,
+    },
     title: {
       fontSize: 32,
       fontWeight: 'bold',
-      textAlign: 'center',
-      marginBottom: 20,
-      color: theme.colors.gradient,
+      color: theme.colors.white,
     },
     welcome: {
+      marginTop: 43,
+      marginBottom: 53,
+      paddingHorizontal: 20,
+    },
+    welcomeLabel: {
       fontSize: 24,
-      textAlign: 'center',
-      marginBottom: 40,
+      fontWeight: 'bold',
       color: theme.colors.gradient,
     },
-    forgotPassword: {
+    input: {
       color: theme.colors.gradient,
-      textAlign: 'right',
-      alignSelf: 'flex-end',
-      marginVertical: 20,
+      fontWeight: '400',
+      fontSize: 20,
+    },
+    forgotPassword: {
+      justifyContent: 'space-between',
+      alignItems: 'flex-end',
+      width: '100%',
+      marginBottom: 33,
+    },
+    forgotPasswordLabel: {
+      color: theme.colors.gradient,
+      fontSize: 17,
     },
     button: {
       minWidth: 190,
@@ -49,9 +64,11 @@ export const makeStyles = (theme: AppTheme, inset: EdgeInsets) =>
     fingerprintButton: {
       marginBottom: 20,
     },
-    signUp: {
-      textAlign: 'center',
-      color: theme.colors.gradient,
+    signUpLink: {
       marginTop: 20,
+      flexDirection: 'row',
+    },
+    signUp: {
+      color: theme.colors.gradient,
     },
   });

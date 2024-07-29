@@ -29,16 +29,19 @@ const makeStyles = (theme: AppTheme) =>
     input: {
       flex: 1,
       height: 50,
-      fontSize: 16,
-      color: theme.colors.black,
+      fontFamily: 'League Spartan',
     },
     eyeIcon: {
       width: 24,
       height: 24,
+      marginLeft: 10,
     },
     focused: {
       borderWidth: 2,
       borderColor: theme.colors.gradient,
+    },
+    paddingBottomPassword: {
+      paddingBottom: 7,
     },
   });
 

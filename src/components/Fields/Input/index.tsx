@@ -1,20 +1,24 @@
-import {EyeIcon} from '@assets/index';
 import {useAppTheme} from '@hooks/theme';
 import React, {useState} from 'react';
 import {
   Text,
   TextInput,
   TextInputProps,
+  TextStyle,
   TouchableOpacity,
   View,
 } from 'react-native';
+import Feather from 'react-native-vector-icons/Feather';
 import makeStyles from './styles';
 
 interface InputProps extends TextInputProps {
   label?: string;
   LeftIcon?: React.FC;
-  RightIcon?: React.FC;
+  rightIcon?: boolean;
   isPassword?: boolean;
+  allowFocusStyle?: boolean;
+  placeholderTextColor?: string;
+  inputStyle?: TextStyle;
 }
 
 export const Input: React.FC<InputProps> = ({
@@ -23,8 +27,11 @@ export const Input: React.FC<InputProps> = ({
   value,
   onChangeText,
   LeftIcon,
-  RightIcon,
+  rightIcon,
   isPassword,
+  allowFocusStyle,
+  placeholderTextColor,
+  inputStyle,
 }) => {
   const theme = useAppTheme();
   const styles = makeStyles(theme);
@@ -35,18 +42,31 @@ export const Input: React.FC<InputProps> = ({
   const toggleSecureTextEntry = () => {
     setSecureTextEntry(!secureTextEntry);
   };
+
   return (
     <View style={styles.container}>
       {label && <Text style={styles.label}>{label}</Text>}
-      <View style={[styles.inputContainer, isFocused && styles.focused]}>
+      <View
+        style={[
+          styles.inputContainer,
+          isFocused && allowFocusStyle && styles.focused,
+        ]}>
         {LeftIcon && (
           <View style={styles.icon}>
             <LeftIcon />
           </View>
         )}
         <TextInput
-          style={styles.input}
+          style={[
+            styles.input,
+            inputStyle,
+            isPassword &&
+              secureTextEntry &&
+              value !== undefined &&
+              styles.paddingBottomPassword,
+          ]}
           placeholder={placeholder}
+          placeholderTextColor={placeholderTextColor}
           value={value}
           onChangeText={onChangeText}
           {...(isPassword && {
@@ -55,10 +75,12 @@ export const Input: React.FC<InputProps> = ({
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
         />
-        {RightIcon && (
+        {rightIcon && (
           <TouchableOpacity onPress={toggleSecureTextEntry}>
             <View style={styles.eyeIcon}>
-              <EyeIcon
+              <Feather
+                size={20}
+                name={secureTextEntry ? 'eye-off' : 'eye'}
                 color={isFocused ? theme.colors.gradient : theme.colors.black}
               />
             </View>
