@@ -5,6 +5,8 @@ export const makeStyles = (theme: AppTheme) =>
   StyleSheet.create({
     linearGradient: {
       minHeight: 40,
+      justifyContent: 'center',
+      alignItems: 'center',
     },
     buttonText: {
       fontSize: 24,
@@ -12,5 +14,7 @@ export const makeStyles = (theme: AppTheme) =>
       textAlign: 'center',
       margin: 10,
       color: theme.colors.white,
+      fontFamily: 'League Spartan',
+      lineHeight: 24,
     },
   });
