@@ -1,14 +1,13 @@
 import {EmailIcon, PasswordIcon} from '@assets/index';
-import {GradientButton, GradientView, Input, Text} from '@components/index';
+import {AuthHeader, GradientButton, Input, Text} from '@components/index';
 import {useAppTheme} from '@hooks/theme';
+import {AuthenticationRootStack} from '@lib/types';
+import {NavigationProp} from '@react-navigation/native';
 import React, {FC} from 'react';
 import {useIntl} from 'react-intl';
 import {ScrollView, TouchableOpacity, View} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {makeStyles} from './styles';
-import {NavigationProp} from '@react-navigation/native';
-import {AuthenticationRootStack} from '@lib/types';
 
 // email, password, first_name, last_name, dob_year, gender
 
@@ -24,9 +23,8 @@ const SignUp: FC<Props> = ({navigation}) => {
 
   return (
     <View style={styles.signUpPage}>
-      <GradientView style={styles.header}>
-        <Text style={styles.title}>{intl.formatMessage({id: 'sign_up'})}</Text>
-      </GradientView>
+      <AuthHeader title="sign_up" />
+
       <ScrollView>
         <View style={styles.container}>
           <Input
@@ -63,31 +61,35 @@ const SignUp: FC<Props> = ({navigation}) => {
           />
 
           <View style={styles.terms}>
-            <Text>By continuing, you agree to</Text>
+            <Text style={styles.label}>
+              {intl.formatMessage({id: 'i_agree'})}
+            </Text>
             <View style={styles.termsLink}>
               <TouchableOpacity>
-                <Text style={styles.link}>Terms of Use</Text>
+                <Text style={styles.link}>
+                  {intl.formatMessage({id: 'terms_of_use'})}
+                </Text>
               </TouchableOpacity>
-              <Text>and</Text>
+              <Text style={styles.label}>
+                {intl.formatMessage({id: 'and'})}
+              </Text>
               <TouchableOpacity>
-                <Text style={styles.link}>Privacy Policy</Text>
+                <Text style={styles.link}>
+                  {intl.formatMessage({id: 'privacy_policy'})}
+                </Text>
               </TouchableOpacity>
             </View>
           </View>
 
           <GradientButton
             label={intl.formatMessage({id: 'sign_up'})}
-            style={styles.signUpButton}
+            rightIcon
           />
 
-          <Text style={styles.orText}>or sign up with</Text>
-
-          <TouchableOpacity onPress={() => {}} style={styles.fingerprintButton}>
-            <MaterialIcons name="fingerprint" size={60} color="#00C1D4" />
-          </TouchableOpacity>
-
           <View style={styles.signInLink}>
-            <Text>{intl.formatMessage({id: 'aready_account'})}</Text>
+            <Text style={styles.label}>
+              {intl.formatMessage({id: 'aready_account'})}
+            </Text>
             <TouchableOpacity onPress={() => navigation.navigate('SignIn')}>
               <Text style={styles.signIn}>
                 {intl.formatMessage({id: 'sign_in'})}

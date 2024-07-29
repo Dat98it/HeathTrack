@@ -1,4 +1,9 @@
 {
+  "or_sign_up_with": "or sign up with",
+  "and": "and",
+  "privacy_policy": "Privacy Policy",
+  "terms_of_use": "Terms of Use",
+  "i_agree": "I have read to",
   "last_name": "Last name",
   "last_name_description": "Enter your last name...",
   "full_name": "Full name",
@@ -26,7 +31,7 @@
   "goto_sign_in": "Go to sign in",
   "sign_in_description": "Log in to access your personalized Medinest experience",
   "sign_up": "Sign Up",
-  "sign_up_title": "Sign Up For Free",
+  "sign_up_title": "Sign up for free",
   "sign_up_description": "Let’s experience the joy of telehealth Medinest \n All In One App",
   "forgot_password": "Forgot password"
 }

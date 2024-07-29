@@ -4,14 +4,16 @@ import {
   ElipseIcon,
   ScheduleYourAppointments,
 } from '@assets/index';
+import {GradientButton} from '@components/GradientButton';
+import {Text} from '@components/Text';
 import React from 'react';
 import {
   Dimensions,
   Image,
   ImageBackground,
+  Platform,
   SafeAreaView,
   StyleSheet,
-  Text,
   TouchableOpacity,
   View,
 } from 'react-native';
@@ -61,11 +63,12 @@ const Step = ({title, description, onClick, currentStep, onSkip}: Props) => {
           );
         })}
       </View>
-      <TouchableOpacity style={styles.nextButton} onPress={onClick}>
-        <Text style={styles.nextButtonText}>
-          {currentStep !== 3 ? 'Next' : 'Get Started'}
-        </Text>
-      </TouchableOpacity>
+
+      <GradientButton
+        label={currentStep !== 3 ? 'Next' : 'Get Started'}
+        style={styles.nextButton}
+        onPress={onClick}
+      />
     </SafeAreaView>
   );
 };
@@ -94,7 +97,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: 400,
     height: 400,
-    marginTop: 100,
+    ...(Platform.OS === 'android'
+      ? {
+          marginTop: 100,
+        }
+      : {}),
   },
   image: {
     width: 200,
@@ -104,12 +111,12 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: Platform.OS === 'ios' ? '500' : 'bold',
     color: '#00B5D8',
     marginBottom: 10,
   },
   description: {
-    fontSize: 16,
+    fontSize: 14,
     color: '#6C6C6C',
     textAlign: 'center',
     marginHorizontal: 20,
@@ -134,12 +141,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 4,
   },
   nextButton: {
-    width: 196,
-    height: 50,
     borderRadius: 25,
-    backgroundColor: '#00B5D8',
-    justifyContent: 'center',
-    alignItems: 'center',
     marginBottom: 20,
   },
   nextButtonText: {

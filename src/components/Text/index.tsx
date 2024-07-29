@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text as RNText, TextStyle} from 'react-native';
+import {StyleSheet, Text as RNText, TextStyle, Platform} from 'react-native';
 
 type Props = {
   style?: TextStyle;
@@ -14,5 +14,7 @@ const makeStyles = () =>
   StyleSheet.create({
     text: {
       fontFamily: 'League Spartan',
+      fontWeight: Platform.OS === 'ios' ? '400' : 'bold',
+      color: 'black',
     },
   });

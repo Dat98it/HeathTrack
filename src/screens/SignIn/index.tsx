@@ -1,5 +1,5 @@
 import {EmailIcon, PasswordIcon} from '@assets/index';
-import {GradientButton, GradientView, Input, Text} from '@components/index';
+import {AuthHeader, GradientButton, Input, Text} from '@components/index';
 import {useAppTheme} from '@hooks/theme';
 import {AuthenticationRootStack} from '@lib/types';
 import {NavigationProp} from '@react-navigation/native';
@@ -26,13 +26,7 @@ const SignIn = ({navigation}: Props) => {
 
   return (
     <View style={styles.loginPage}>
-      <GradientView style={styles.header}>
-        <Text style={styles.title}>{intl.formatMessage({id: 'sign_in'})}</Text>
-      </GradientView>
-
-      <View style={styles.welcome}>
-        <Text style={styles.welcomeLabel}>Welcome</Text>
-      </View>
+      <AuthHeader title="sign_in" />
 
       <View style={styles.container}>
         <Input
@@ -56,13 +50,15 @@ const SignIn = ({navigation}: Props) => {
         <TouchableOpacity
           style={styles.forgotPassword}
           onPress={() => navigation.navigate('ResetPassword')}>
-          <Text style={styles.forgotPasswordLabel}>Forget Password</Text>
+          <Text style={styles.forgotPasswordLabel}>
+            {intl.formatMessage({id: 'forgot_password'})}
+          </Text>
         </TouchableOpacity>
 
         <GradientButton
-          label="Log In"
-          style={styles.button}
+          label={intl.formatMessage({id: 'sign_in'})}
           onPress={handleSignIn}
+          rightIcon
         />
 
         <Text style={styles.or}>or</Text>
@@ -72,9 +68,13 @@ const SignIn = ({navigation}: Props) => {
         </TouchableOpacity>
 
         <View style={styles.signUpLink}>
-          <Text>Don't have an account? </Text>
+          <Text style={styles.label}>
+            {intl.formatMessage({id: 'dont_have_account'})}
+          </Text>
           <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
-            <Text style={styles.signUp}>Sign Up</Text>
+            <Text style={styles.signUp}>
+              {intl.formatMessage({id: 'sign_up'})}
+            </Text>
           </TouchableOpacity>
         </View>
       </View>

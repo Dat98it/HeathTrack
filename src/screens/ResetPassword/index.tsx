@@ -1,5 +1,6 @@
 import {EmailIcon} from '@assets/index';
-import {GradientButton, GradientView, Input, Text} from '@components/index';
+import {AuthHeader, GradientButton, Input, Text} from '@components/index';
+import {Paths} from '@constant/navigation';
 import {useAppTheme} from '@hooks/theme';
 import {AuthenticationRootStack} from '@lib/types';
 import {NavigationProp} from '@react-navigation/native';
@@ -7,9 +8,7 @@ import React from 'react';
 import {useIntl} from 'react-intl';
 import {TouchableOpacity, View} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 import {makeStyles} from './style';
-import {Paths} from '@constant/navigation';
 
 type Props = {
   navigation: NavigationProp<AuthenticationRootStack>;
@@ -23,11 +22,7 @@ const ResetPassword = ({navigation}: Props) => {
 
   return (
     <View style={styles.loginPage}>
-      <GradientView style={styles.header}>
-        <Text style={styles.title}>
-          {intl.formatMessage({id: 'reset_pasword'})}
-        </Text>
-      </GradientView>
+      <AuthHeader title="reset_pasword" />
 
       <View style={styles.container}>
         <Input
@@ -42,16 +37,13 @@ const ResetPassword = ({navigation}: Props) => {
         <GradientButton
           label={intl.formatMessage({id: 'reset_pasword'})}
           style={styles.button}
+          rightIcon
         />
 
-        <Text style={styles.or}>or</Text>
-
-        <TouchableOpacity onPress={() => {}} style={styles.fingerprintButton}>
-          <Icon name="fingerprint" size={60} color="#00C1D4" />
-        </TouchableOpacity>
-
         <View style={styles.signInLink}>
-          <Text>{intl.formatMessage({id: 'aready_account'})}</Text>
+          <Text style={styles.label}>
+            {intl.formatMessage({id: 'aready_account'})}
+          </Text>
           <TouchableOpacity onPress={() => navigation.navigate(Paths.SignIn)}>
             <Text style={styles.signIn}>
               {intl.formatMessage({id: 'sign_in'})}

@@ -19,6 +19,7 @@ interface InputProps extends TextInputProps {
   allowFocusStyle?: boolean;
   placeholderTextColor?: string;
   inputStyle?: TextStyle;
+  error?: string;
 }
 
 export const Input: React.FC<InputProps> = ({
@@ -32,6 +33,7 @@ export const Input: React.FC<InputProps> = ({
   allowFocusStyle,
   placeholderTextColor,
   inputStyle,
+  error,
 }) => {
   const theme = useAppTheme();
   const styles = makeStyles(theme);
@@ -87,6 +89,7 @@ export const Input: React.FC<InputProps> = ({
           </TouchableOpacity>
         )}
       </View>
+      {error && <Text style={styles.error}>{error}</Text>}
     </View>
   );
 };

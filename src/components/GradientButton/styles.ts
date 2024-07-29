@@ -3,10 +3,14 @@ import {StyleSheet} from 'react-native';
 
 export const makeStyles = (theme: AppTheme) =>
   StyleSheet.create({
+    container: {width: '100%'},
     linearGradient: {
-      minHeight: 40,
+      minHeight: 53,
       justifyContent: 'center',
       alignItems: 'center',
+      flexDirection: 'row',
+      width: '100%',
+      borderRadius: 16,
     },
     buttonText: {
       fontSize: 24,

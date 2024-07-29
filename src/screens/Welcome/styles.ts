@@ -18,7 +18,7 @@ const makeStyles = (theme: AppTheme) =>
       fontSize: 24,
       fontWeight: 'bold',
       color: theme.colors.gradient,
-      marginTop: 27,
+      marginTop: 10,
       marginBottom: 80,
     },
     subtitle: {
@@ -28,7 +28,7 @@ const makeStyles = (theme: AppTheme) =>
       paddingHorizontal: 20,
       marginBottom: 30,
     },
-    groupButton: {gap: 7},
+    groupButton: {gap: 20},
     button: {
       width: 207,
       height: 45,
@@ -43,6 +43,7 @@ const makeStyles = (theme: AppTheme) =>
       backgroundColor: '#e0f7fa',
       justifyContent: 'center',
       alignItems: 'center',
+      height: 53,
     },
     signupButtonText: {
       color: theme.colors.gradient,

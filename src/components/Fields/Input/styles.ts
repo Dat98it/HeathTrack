@@ -1,5 +1,5 @@
 import {AppTheme} from '@lib/theme';
-import {StyleSheet} from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
 
 const makeStyles = (theme: AppTheme) =>
   StyleSheet.create({
@@ -30,6 +30,7 @@ const makeStyles = (theme: AppTheme) =>
       flex: 1,
       height: 50,
       fontFamily: 'League Spartan',
+      fontWeight: Platform.OS === 'ios' ? '400' : 'bold',
     },
     eyeIcon: {
       width: 24,
@@ -43,6 +44,7 @@ const makeStyles = (theme: AppTheme) =>
     paddingBottomPassword: {
       paddingBottom: 7,
     },
+    error: {color: theme.colors.red, marginLeft: 10, fontSize: 17},
   });
 
 export default makeStyles;

@@ -12,21 +12,11 @@ export const makeStyles = (theme: AppTheme, inset: EdgeInsets) =>
     container: {
       flex: 1,
       alignItems: 'center',
-      padding: 20,
-    },
-    header: {
-      justifyContent: 'center',
-      alignItems: 'center',
-      height: 60,
-    },
-    title: {
-      fontSize: 32,
-      fontWeight: 'bold',
-      color: theme.colors.white,
+      paddingHorizontal: 20,
+      paddingBottom: 20,
     },
     input: {
       color: theme.colors.gradient,
-      fontWeight: '400',
       fontSize: 20,
     },
     passwordContainer: {
@@ -51,30 +41,12 @@ export const makeStyles = (theme: AppTheme, inset: EdgeInsets) =>
     },
     link: {
       color: theme.colors.gradient,
-    },
-    signUpButton: {
-      minWidth: 190,
-      borderRadius: 25,
-      backgroundColor: theme.colors.gradient,
-      maxHeight: 50,
-      marginTop: 8,
+      fontSize: 17,
     },
     signUpButtonText: {
       color: '#fff',
       fontSize: 18,
       fontWeight: 'bold',
-    },
-    orText: {
-      fontSize: 16,
-      color: '#000',
-      textAlign: 'center',
-      marginVertical: 12,
-    },
-    fingerprintButton: {
-      marginBottom: 20,
-      width: '100%',
-      justifyContent: 'center',
-      alignItems: 'center',
     },
     signInLink: {
       marginTop: 20,
@@ -83,5 +55,7 @@ export const makeStyles = (theme: AppTheme, inset: EdgeInsets) =>
     },
     signIn: {
       color: theme.colors.gradient,
+      fontSize: 17,
     },
+    label: {fontSize: 17},
   });

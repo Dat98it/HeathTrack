@@ -12,6 +12,7 @@ export const DefaultTheme = {
     gradient: '#13CAD6',
     startGradient: '#33E4DB',
     endGradient: '#00BBD3',
+    red: 'red',
     elevation: {
       level0: 'transparent',
       level1: 'rgb(247, 243, 249)', // palette.primary40, alpha 0.05

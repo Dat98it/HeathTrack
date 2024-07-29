@@ -5,3 +5,4 @@ export * from './Fields';
 export * from './GradientButton';
 export * from './Text';
 export * from './GradientView';
+export * from './AuthHeader';
