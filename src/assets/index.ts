@@ -12,3 +12,4 @@ export {default as EmailIcon} from './icons/email.svg';
 export {default as ChooseYourDoctor} from './images/ChooseYourDoctor.png';
 export {default as ScheduleYourAppointments} from './images/ScheduleYourAppointments.png';
 export {default as CheckYourMedicalHistory} from './images/CheckYourMedicalHistory.png';
+export {default as AppIcon} from './images/AppIcon.png';
