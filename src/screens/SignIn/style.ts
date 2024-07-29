@@ -20,31 +20,25 @@ export const makeStyles = (theme: AppTheme, inset: EdgeInsets) =>
       fontWeight: 'bold',
       textAlign: 'center',
       marginBottom: 20,
-      color: theme.colors.gradient2,
+      color: theme.colors.gradient,
     },
     welcome: {
       fontSize: 24,
       textAlign: 'center',
       marginBottom: 40,
-      color: theme.colors.gradient2,
+      color: theme.colors.gradient,
     },
     forgotPassword: {
-      color: theme.colors.gradient2,
+      color: theme.colors.gradient,
       textAlign: 'right',
       alignSelf: 'flex-end',
       marginVertical: 20,
     },
     button: {
-      width: '100%',
+      minWidth: 190,
       borderRadius: 25,
-      backgroundColor: theme.colors.gradient2,
-    },
-    buttonContent: {
-      height: 50,
-    },
-    buttonLabel: {
-      fontSize: 18,
-      color: theme.colors.white,
+      backgroundColor: theme.colors.gradient,
+      maxHeight: 50,
     },
     or: {
       textAlign: 'center',
@@ -57,7 +51,7 @@ export const makeStyles = (theme: AppTheme, inset: EdgeInsets) =>
     },
     signUp: {
       textAlign: 'center',
-      color: theme.colors.gradient2,
+      color: theme.colors.gradient,
       marginTop: 20,
     },
   });

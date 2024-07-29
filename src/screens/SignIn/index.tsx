@@ -1,15 +1,14 @@
 import {EmailIcon, EyeIcon, PasswordIcon} from '@assets/index';
-import {Input} from '@components/index';
+import {GradientButton, Input} from '@components/index';
 import {useAppTheme} from '@hooks/theme';
 import {AuthenticationRootStack} from '@lib/types';
 import {NavigationProp} from '@react-navigation/native';
 import React from 'react';
 import {useIntl} from 'react-intl';
 import {Text, TouchableOpacity, View} from 'react-native';
-import {Button} from 'react-native-paper';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {makeStyles} from './style';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 type Props = {
   navigation: NavigationProp<AuthenticationRootStack>;
@@ -49,14 +48,11 @@ const SignIn = ({navigation}: Props) => {
           <Text style={styles.forgotPassword}>Forget Password</Text>
         </TouchableOpacity>
 
-        <Button
-          mode="contained"
-          onPress={handleSignIn}
+        <GradientButton
+          label="Log In"
           style={styles.button}
-          contentStyle={styles.buttonContent}
-          labelStyle={styles.buttonLabel}>
-          Log In
-        </Button>
+          onPress={handleSignIn}
+        />
 
         <Text style={styles.or}>or</Text>
 

@@ -9,7 +9,8 @@ export const DefaultTheme = {
     lighBlue: '#E9F6FE',
     gray: 'B5B5B5',
     gradient: '#13CAD6',
-    gradient2: '#00C1D4',
+    startGradient: '#33E4DB',
+    endGradient: '#00BBD3',
     elevation: {
       level0: 'transparent',
       level1: 'rgb(247, 243, 249)', // palette.primary40, alpha 0.05
