@@ -23,7 +23,8 @@ const DrawerStack = createDrawerNavigator();
 
 export const AppNavigator = () => {
   const locale = useSelector(localeSelector);
-  const auth = useSelector(authSelector);
+  // const auth = useSelector(authSelector);
+  const auth = 'abc';
 
   return (
     <IntlProvider
