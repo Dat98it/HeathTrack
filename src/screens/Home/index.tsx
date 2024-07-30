@@ -1,11 +1,29 @@
 import React from 'react';
-import {SafeAreaView, Text} from 'react-native';
+import {ScrollView, View} from 'react-native';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import makeStyles from './styles';
+import {useAppTheme} from '@hooks/theme';
+import Header from './components/Header';
+import Categories from './components/Categories';
+import {UpcomingSchedule} from './components/UpcomingSchedule';
+import Specialties from './components/Specialties';
 
 const Home = () => {
+  const inset = useSafeAreaInsets();
+  const theme = useAppTheme();
+  const styles = makeStyles(theme, inset);
+
   return (
-    <SafeAreaView>
-      <Text>Welcome to the Home Screen!</Text>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <Header />
+      <ScrollView>
+        <Categories />
+
+        <UpcomingSchedule />
+
+        <Specialties />
+      </ScrollView>
+    </View>
   );
 };
 
