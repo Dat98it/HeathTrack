@@ -1,4 +1,5 @@
 {
+  "categories": "Categories",
   "cardiology": "Cardiology",
   "dermatology": "Dermatology",
   "general_medicine": "General Medicine",
@@ -12,7 +13,7 @@
   "favorite": "Favorite",
   "see_all": "See all",
   "month": "Month",
-  "upcoming_schedule": "Upcoming Schedule",
+  "upcoming_schedule": "Upcoming schedule",
   "or_sign_up_with": "or sign up with",
   "and": "and",
   "privacy_policy": "Privacy Policy",

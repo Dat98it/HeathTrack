@@ -46,9 +46,13 @@ const Categories = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.title}>Categories</Text>
+        <Text style={styles.title}>
+          <FormattedMessage id="categories" />
+        </Text>
         <TouchableOpacity>
-          <Text style={styles.seeAll}>See all</Text>
+          <Text style={styles.seeAll}>
+            <FormattedMessage id="see_all" />
+          </Text>
         </TouchableOpacity>
       </View>
 
