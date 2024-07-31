@@ -1,4 +1,4 @@
-import {PencilRoundIcon, ProfileExample} from '@assets/index';
+import {PencilRoundIcon, ProfileExample, SearchIcon} from '@assets/index';
 import {Text} from '@components/Text';
 import {useAppTheme} from '@hooks/theme';
 import React from 'react';
@@ -7,7 +7,7 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import makeStyles from './styles';
 
-const Header = () => {
+export const HomeHeader = () => {
   const theme = useAppTheme();
   const styles = makeStyles(theme);
 
@@ -21,7 +21,7 @@ const Header = () => {
           <FontAwesome name="cog" size={24} color={theme.colors.black} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.icon}>
-          <FontAwesome name="search" size={24} color={theme.colors.black} />
+          <SearchIcon color={theme.colors.black} />
         </TouchableOpacity>
       </View>
       <View style={styles.userContainer}>
@@ -39,5 +39,3 @@ const Header = () => {
     </View>
   );
 };
-
-export default Header;

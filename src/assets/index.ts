@@ -23,6 +23,7 @@ export {default as HomeIcon} from './icons/HomeIcon';
 export {default as MessageIcon} from './icons/MessageIcon';
 export {default as UserProfileIcon} from './icons/UserProfile';
 export {default as BookingIcon} from './icons/BookingIcon';
+export {default as SearchIcon} from './icons/SearchIcon';
 
 //images
 export {default as ChooseYourDoctor} from './images/ChooseYourDoctor.png';

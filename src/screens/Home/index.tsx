@@ -3,10 +3,10 @@ import {ScrollView, View} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import makeStyles from './styles';
 import {useAppTheme} from '@hooks/theme';
-import Header from './components/Header';
 import Categories from './components/Categories';
 import {UpcomingSchedule} from './components/UpcomingSchedule';
 import Specialties from './components/Specialties';
+import {HomeHeader} from '@components/index';
 
 const Home = () => {
   const inset = useSafeAreaInsets();
@@ -15,7 +15,7 @@ const Home = () => {
 
   return (
     <View style={styles.container}>
-      <Header />
+      <HomeHeader />
       <ScrollView>
         <Categories />
 
