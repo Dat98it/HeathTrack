@@ -4,24 +4,27 @@ import {
   MessageIcon,
   UserProfileIcon,
 } from '@assets/index';
-import {HomeStacks} from '@constant/index';
 import {useAppTheme} from '@hooks/theme';
 import React from 'react';
 import {View} from 'react-native';
 import makeStyles from './styles';
+import {BottomRootStack} from '@constant/index';
 
 interface TabBarIconProps {
-  routeName: keyof typeof HomeStacks;
+  routeName: keyof typeof BottomRootStack;
   focused: boolean;
   color: string;
   size: number;
 }
 
-const iconMap: Record<keyof typeof HomeStacks, React.ComponentType<any>> = {
-  [HomeStacks.Home]: HomeIcon,
-  [HomeStacks.Chat]: MessageIcon,
-  [HomeStacks.Schedule]: BookingIcon,
-  [HomeStacks.Profile]: UserProfileIcon,
+const iconMap: Record<
+  keyof typeof BottomRootStack,
+  React.ComponentType<any>
+> = {
+  [BottomRootStack.Home]: HomeIcon,
+  [BottomRootStack.Chat]: MessageIcon,
+  [BottomRootStack.Schedule]: BookingIcon,
+  [BottomRootStack.Profile]: UserProfileIcon,
 };
 
 export const TabBarIcon: React.FC<TabBarIconProps> = ({routeName, focused}) => {

@@ -1,13 +1,14 @@
 export enum Paths {
   BottomStack = 'BottomStack',
   Authentication = 'Authentication',
-  SignIn = 'SignIn',
-  SignUp = 'SignUp',
-  ResetPassword = 'ResetPassword',
+  AppStack = 'AppStack',
   Home = 'Home',
   Chat = 'Chat',
   Schedule = 'Schedule',
   Profile = 'Profile',
+  SignIn = 'SignIn',
+  SignUp = 'SignUp',
+  ResetPassword = 'ResetPassword',
   OnBoarding = 'OnBoarding',
   Welcome = 'Welcome',
   SpecialtyStack = 'SpecialtyStack',
@@ -15,7 +16,7 @@ export enum Paths {
   SpecialtyDetail = 'SpecialtyDetail',
 }
 
-export enum HomeStacks {
+export enum BottomRootStack {
   Home = 'Home',
   Chat = 'Chat',
   Schedule = 'Schedule',

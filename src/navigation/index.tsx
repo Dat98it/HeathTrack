@@ -1,67 +1,61 @@
-/* eslint-disable react/no-unstable-nested-components */
 import {Paths} from '@constant/index';
 import {AppRootStackParams} from '@lib/types';
 import {messages} from '@locale/index';
-import {createDrawerNavigator} from '@react-navigation/drawer';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {localeSelector} from '@redux/reducer/locale';
 
-import {CustomDrawerContent} from '@components/index';
 import React from 'react';
 import {IntlProvider} from 'react-intl';
 import {PaperProvider} from 'react-native-paper';
 import {useSelector} from 'react-redux';
 import {Authentication} from './Authentication';
-import {BottomStackScreen} from './BottomStackScreen';
 
 import {DefaultTheme} from '@lib/theme';
-import SpecialtiesStack from './SpecialtiesStack';
+import {authSelector} from '@redux/reducer/auth';
+import {BottomStackScreen} from './BottomStackScreen';
+import Specialties from '@screens/Specialties';
+import SpecialtyDetail from '@screens/SpecialtyDetail';
 
 const AppRootStack = createNativeStackNavigator<AppRootStackParams>();
-const DrawerStack = createDrawerNavigator();
 
 export const AppNavigator = () => {
   const locale = useSelector(localeSelector);
-  // const auth = useSelector(authSelector);
-  const auth = 'abc';
+  const auth = useSelector(authSelector);
 
   return (
     <IntlProvider
       locale={locale}
       messages={messages[locale as keyof typeof messages]}>
       <PaperProvider theme={DefaultTheme}>
-        <NavigationContainer
-        // onStateChange={(state: NavigationState | undefined) => {
-        //   console.log(JSON.stringify(state?.history, null, 2));
-        // }}
-        >
-          {auth ? (
-            <DrawerStack.Navigator
-              useLegacyImplementation={false}
-              drawerContent={props => <CustomDrawerContent {...props} />}
-              screenOptions={{
-                headerShown: false,
-              }}>
-              <DrawerStack.Screen
-                name={Paths.BottomStack}
-                component={BottomStackScreen}
-              />
-
-              <DrawerStack.Screen
-                name={Paths.SpecialtyStack}
-                component={SpecialtiesStack}
-              />
-            </DrawerStack.Navigator>
-          ) : (
-            <AppRootStack.Navigator>
+        <NavigationContainer>
+          <AppRootStack.Navigator>
+            {auth ? (
+              <>
+                <AppRootStack.Screen
+                  name={Paths.BottomStack}
+                  component={BottomStackScreen}
+                  options={{headerShown: false}}
+                />
+                <AppRootStack.Screen
+                  name={Paths.Specialties}
+                  component={Specialties}
+                  options={{headerShown: false}}
+                />
+                <AppRootStack.Screen
+                  name={Paths.SpecialtyDetail}
+                  component={SpecialtyDetail}
+                  options={{headerShown: false}}
+                />
+              </>
+            ) : (
               <AppRootStack.Screen
                 name={Paths.Authentication}
                 component={Authentication}
                 options={{headerShown: false}}
               />
-            </AppRootStack.Navigator>
-          )}
+            )}
+          </AppRootStack.Navigator>
         </NavigationContainer>
       </PaperProvider>
     </IntlProvider>
