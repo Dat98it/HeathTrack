@@ -26,6 +26,7 @@ export {default as MessageIcon} from './icons/MessageIcon';
 export {default as UserProfileIcon} from './icons/UserProfile';
 export {default as BookingIcon} from './icons/BookingIcon';
 export {default as SearchIcon} from './icons/SearchIcon';
+export {default as MedicalNotes} from './icons/MedicalNotes';
 
 //images
 export {default as ChooseYourDoctor} from './images/ChooseYourDoctor.png';

@@ -29,6 +29,7 @@ export type AppRootStackParams = {
           gender: string;
         };
       };
+  Notifications: undefined;
 };
 
 export type AuthenticationRootStack = {

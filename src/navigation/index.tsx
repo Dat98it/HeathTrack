@@ -16,6 +16,7 @@ import {authSelector} from '@redux/reducer/auth';
 import {BottomStackScreen} from './BottomStackScreen';
 import {SpecialtiesStack} from './SpecialtiesStack';
 import {DoctorScreenStack} from './DoctorStackScreen';
+import Notifications from '@screens/Notifications';
 
 const AppRootStack = createNativeStackNavigator<AppRootStackParams>();
 
@@ -47,6 +48,12 @@ export const AppNavigator = () => {
                 <AppRootStack.Screen
                   name={Paths.DoctorStack}
                   component={DoctorScreenStack}
+                  options={{headerShown: false}}
+                />
+
+                <AppRootStack.Screen
+                  name={Paths.Notifications}
+                  component={Notifications}
                   options={{headerShown: false}}
                 />
               </>

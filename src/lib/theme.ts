@@ -9,6 +9,7 @@ export const DefaultTheme = {
     primary: '#0BAB7C',
     lighBlue: '#E9F6FE',
     gray: 'B5B5B5',
+    placeholder: '#666',
     gradient: '#13CAD6',
     startGradient: '#33E4DB',
     endGradient: '#00BBD3',

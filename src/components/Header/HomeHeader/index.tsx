@@ -6,15 +6,20 @@ import {Image, TouchableOpacity, View} from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import makeStyles from './styles';
+import {useAppNavigation} from '@hooks/navigation';
+import {Paths} from '@constant/navigation';
 
 export const HomeHeader = () => {
   const theme = useAppTheme();
   const styles = makeStyles(theme);
+  const navigation = useAppNavigation();
 
   return (
     <View style={styles.container}>
       <View style={styles.iconsContainer}>
-        <TouchableOpacity style={styles.icon}>
+        <TouchableOpacity
+          style={styles.icon}
+          onPress={() => navigation.navigate(Paths.Notifications)}>
           <Entypo name="bell" size={24} color={theme.colors.black} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.icon}>
