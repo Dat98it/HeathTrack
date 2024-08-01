@@ -10,38 +10,43 @@ import React from 'react';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
 import makeStyles from './styles';
 import {FormattedMessage} from 'react-intl';
-
-const categories = [
-  {
-    id: 1,
-    title: 'favorite',
-    Icon: FavouriteIcon,
-  },
-  {
-    id: 2,
-    title: 'doctor',
-    Icon: StethoscopeIcon,
-  },
-  {
-    id: 3,
-    title: 'pharmacy',
-    Icon: PhamacyIcon,
-  },
-  {
-    id: 4,
-    title: 'specialties',
-    Icon: null,
-  },
-  {
-    id: 5,
-    title: 'record',
-    Icon: RecordIcon,
-  },
-];
+import {NavigationProp, useNavigation} from '@react-navigation/native';
+import {AppRootStackParams} from '@lib/types';
+import {Paths} from '@constant/navigation';
 
 const Categories = () => {
   const theme = useAppTheme();
   const styles = makeStyles(theme);
+  const navigation = useNavigation<NavigationProp<AppRootStackParams>>();
+
+  const categories = [
+    {
+      id: 1,
+      title: 'favorite',
+      Icon: FavouriteIcon,
+    },
+    {
+      id: 2,
+      title: 'doctor',
+      Icon: StethoscopeIcon,
+    },
+    {
+      id: 3,
+      title: 'pharmacy',
+      Icon: PhamacyIcon,
+    },
+    {
+      id: 4,
+      title: 'specialties',
+      Icon: null,
+      onPress: () => navigation.navigate(Paths.Specialties),
+    },
+    {
+      id: 5,
+      title: 'record',
+      Icon: RecordIcon,
+    },
+  ];
 
   return (
     <View style={styles.container}>
@@ -58,7 +63,10 @@ const Categories = () => {
 
       <View style={styles.menu}>
         {categories.map(category => (
-          <TouchableOpacity key={category.id} style={styles.menuItem}>
+          <TouchableOpacity
+            key={category.id}
+            style={styles.menuItem}
+            onPress={category.onPress}>
             {category.Icon ? (
               <category.Icon />
             ) : (

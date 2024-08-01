@@ -1,5 +1,10 @@
 {
+  "sort_by": "Sắp xếp theo",
+  "filter": "Lọc",
+  "find_your_doctor": "Tìm bác sĩ của bạn",
   "categories": "Thể loại",
+  "orthopedics": "Chỉnh hình",
+  "ophthalmology": "Nhãn khoa",
   "cardiology": "Tim mạch",
   "dermatology": "Da liễu",
   "general_medicine": "Y học tổng quát",

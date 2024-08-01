@@ -1,8 +1,3 @@
-export type AppRootStackParams = {
-  BottomStack: undefined;
-  Authentication: undefined;
-};
-
 export type AuthenticationRootStack = {
   SignIn: undefined;
   SignUp: undefined;
@@ -16,3 +11,9 @@ export type BottomRootStack = {
   Schedule: undefined;
   Profile: undefined;
 };
+
+export type AppRootStackParams = {
+  BottomStack: undefined;
+  Authentication: undefined;
+  Specialties: undefined;
+} & BottomRootStack;

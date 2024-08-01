@@ -7,3 +7,4 @@ export * from './Text';
 export * from './GradientView';
 export * from './Header/AuthHeader';
 export * from './Header/HomeHeader';
+export * from './Header/SpecialtiesHeader';

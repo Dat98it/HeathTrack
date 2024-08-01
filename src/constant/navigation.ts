@@ -10,6 +10,7 @@ export enum Paths {
   Profile = 'Profile',
   OnBoarding = 'OnBoarding',
   Welcome = 'Welcome',
+  Specialties = 'Specialties',
 }
 
 export enum HomeStacks {

@@ -8,6 +8,8 @@ export {default as FingerPrintIcon} from './icons/finger-print.svg';
 export {default as PasswordIcon} from './icons/password.svg';
 export {default as EmailIcon} from './icons/email.svg';
 export {default as DotIcon} from './icons/dot.svg';
+export {default as OphtamologyIcon} from './icons/ophtamology.svg';
+export {default as OrthopedicsIcon} from './icons/orthopedics.svg';
 export {default as OncologyIcon} from './icons/oncology.svg';
 export {default as OdontologyIcon} from './icons/odontology.svg';
 export {default as GynecologyIcon} from './icons/gynecology.svg';
