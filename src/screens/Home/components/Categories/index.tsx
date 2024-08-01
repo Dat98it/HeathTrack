@@ -5,19 +5,18 @@ import {
   SpecialityIcon,
   StethoscopeIcon,
 } from '@assets/index';
+import {Paths} from '@constant/navigation';
+import {useAppNavigation} from '@hooks/navigation';
 import {useAppTheme} from '@hooks/theme';
 import React from 'react';
+import {FormattedMessage} from 'react-intl';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
 import makeStyles from './styles';
-import {FormattedMessage} from 'react-intl';
-import {NavigationProp, useNavigation} from '@react-navigation/native';
-import {AppRootStackParams} from '@lib/types';
-import {Paths} from '@constant/navigation';
 
 const Categories = () => {
   const theme = useAppTheme();
   const styles = makeStyles(theme);
-  const navigation = useNavigation<NavigationProp<AppRootStackParams>>();
+  const navigation = useAppNavigation();
 
   const categories = [
     {
@@ -39,7 +38,7 @@ const Categories = () => {
       id: 4,
       title: 'specialties',
       Icon: null,
-      onPress: () => navigation.navigate(Paths.Specialties),
+      onPress: () => navigation.navigate(Paths.SpecialtyStack),
     },
     {
       id: 5,

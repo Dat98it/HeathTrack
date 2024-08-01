@@ -12,6 +12,8 @@ import {
   OncologyIcon,
 } from '@assets/index';
 import {FormattedMessage} from 'react-intl';
+import {useAppNavigation} from '@hooks/navigation';
+import {Paths} from '@constant/index';
 
 const specialties = [
   {name: 'cardiology', Icon: CadiologyIcon},
@@ -22,6 +24,7 @@ const specialties = [
   {name: 'oncology', Icon: OncologyIcon},
 ];
 const Specialties = () => {
+  const navigation = useAppNavigation();
   const theme = useAppTheme();
   const styles = makeStyles(theme);
 
@@ -31,7 +34,8 @@ const Specialties = () => {
         <Text style={styles.title}>
           <FormattedMessage id="specialties" />
         </Text>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate(Paths.Specialties)}>
           <Text style={styles.seeAll}>
             <FormattedMessage id="see_all" />
           </Text>
@@ -39,7 +43,14 @@ const Specialties = () => {
       </View>
       <View style={styles.grid}>
         {specialties.map((specialty, index) => (
-          <TouchableOpacity key={index} style={styles.gridItem}>
+          <TouchableOpacity
+            key={index}
+            style={styles.gridItem}
+            onPress={() =>
+              navigation.navigate(Paths.SpecialtyDetail, {
+                category: specialty.name,
+              })
+            }>
             <View style={styles.gridIcon}>
               <specialty.Icon />
             </View>

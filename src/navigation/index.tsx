@@ -16,8 +16,7 @@ import {Authentication} from './Authentication';
 import {BottomStackScreen} from './BottomStackScreen';
 
 import {DefaultTheme} from '@lib/theme';
-import {authSelector} from '@redux/reducer/auth';
-import Specialties from '@screens/Specialties';
+import SpecialtiesStack from './SpecialtiesStack';
 
 const AppRootStack = createNativeStackNavigator<AppRootStackParams>();
 const DrawerStack = createDrawerNavigator();
@@ -32,7 +31,11 @@ export const AppNavigator = () => {
       locale={locale}
       messages={messages[locale as keyof typeof messages]}>
       <PaperProvider theme={DefaultTheme}>
-        <NavigationContainer>
+        <NavigationContainer
+        // onStateChange={(state: NavigationState | undefined) => {
+        //   console.log(JSON.stringify(state?.history, null, 2));
+        // }}
+        >
           {auth ? (
             <DrawerStack.Navigator
               useLegacyImplementation={false}
@@ -44,9 +47,10 @@ export const AppNavigator = () => {
                 name={Paths.BottomStack}
                 component={BottomStackScreen}
               />
+
               <DrawerStack.Screen
-                name={Paths.Specialties}
-                component={Specialties}
+                name={Paths.SpecialtyStack}
+                component={SpecialtiesStack}
               />
             </DrawerStack.Navigator>
           ) : (

@@ -16,6 +16,7 @@ const Home = () => {
   return (
     <View style={styles.container}>
       <HomeHeader />
+
       <ScrollView>
         <Categories />
 
