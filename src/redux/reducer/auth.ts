@@ -7,7 +7,7 @@ export interface initialState {
 }
 
 const initialState: initialState = {
-  token: '',
+  token: 'abc',
   user: null,
 };
 

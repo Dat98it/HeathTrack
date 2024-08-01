@@ -1,9 +1,7 @@
 /* eslint-disable react/no-unstable-nested-components */
 import {useAppTheme} from '@hooks/theme';
 import {AppTheme} from '@lib/theme';
-import {BottomRootStack} from '@lib/types';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {HomeStacks} from '@constant/index';
 
 import React from 'react';
 import {StyleSheet} from 'react-native';
@@ -13,6 +11,8 @@ import Home from '@screens/Home';
 import Chat from '@screens/Chat';
 import Profile from '@screens/Profile';
 import Calendar from '@screens/Calendar';
+import {BottomRootStack} from '@lib/types';
+import {Paths} from '@constant/navigation';
 
 const Tab = createBottomTabNavigator<BottomRootStack>();
 
@@ -29,13 +29,13 @@ export const BottomStackScreen = () => {
         tabBarStyle: styles.tabBarStyle,
         headerShown: false,
       })}>
-      <Tab.Screen name={HomeStacks.Home}>{() => <Home />}</Tab.Screen>
+      <Tab.Screen name={Paths.Home}>{() => <Home />}</Tab.Screen>
 
-      <Tab.Screen name={HomeStacks.Chat}>{() => <Chat />}</Tab.Screen>
+      <Tab.Screen name={Paths.Chat}>{() => <Chat />}</Tab.Screen>
 
-      <Tab.Screen name={HomeStacks.Profile}>{() => <Profile />}</Tab.Screen>
+      <Tab.Screen name={Paths.Profile}>{() => <Profile />}</Tab.Screen>
 
-      <Tab.Screen name={HomeStacks.Schedule}>{() => <Calendar />}</Tab.Screen>
+      <Tab.Screen name={Paths.Schedule}>{() => <Calendar />}</Tab.Screen>
     </Tab.Navigator>
   );
 };
