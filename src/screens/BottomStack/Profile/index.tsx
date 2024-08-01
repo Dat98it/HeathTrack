@@ -1,12 +1,10 @@
 import React from 'react';
 import {SafeAreaView, Text} from 'react-native';
 
-const Chat = () => {
+export const Profile = () => {
   return (
     <SafeAreaView>
-      <Text>Chat Component</Text>
+      <Text>Profile Component</Text>
     </SafeAreaView>
   );
 };
-
-export default Chat;

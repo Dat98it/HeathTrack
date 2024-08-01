@@ -12,7 +12,7 @@ type Props = {
   navigation: NavigationProp<AuthenticationRootStack>;
 };
 
-const Welcome = ({navigation}: Props) => {
+export const Welcome = ({navigation}: Props) => {
   const theme = useAppTheme();
   const styles = makeStyles(theme);
 
@@ -42,5 +42,3 @@ const Welcome = ({navigation}: Props) => {
     </View>
   );
 };
-
-export default Welcome;

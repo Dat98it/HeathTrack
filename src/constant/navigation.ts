@@ -12,8 +12,14 @@ export enum Paths {
   OnBoarding = 'OnBoarding',
   Welcome = 'Welcome',
   SpecialtiesStack = 'SpecialtiesStack',
-  Specialties = 'Specialties',
+  SpecialtyList = 'SpecialtyList',
   SpecialtyDetail = 'SpecialtyDetail',
+  DoctorStack = 'DoctorStack',
+  ListDoctor = 'ListDoctor',
+  InfoDoctor = 'InfoDoctor',
+  RatingDoctor = 'RatingDoctor',
+  FavouriteDoctor = 'FavouriteDoctor',
+  DoctorByGender = 'DoctorByGender',
 }
 
 export enum BottomRootStack {

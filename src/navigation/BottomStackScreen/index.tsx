@@ -3,16 +3,13 @@ import {useAppTheme} from '@hooks/theme';
 import {AppTheme} from '@lib/theme';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
+import {TabBarIcon} from '@components/index';
+import {Paths} from '@constant/navigation';
+import {BottomRootStack} from '@lib/types';
+import {Calendar, Chat, Home, Profile} from '@screens/BottomStack';
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import {EdgeInsets, useSafeAreaInsets} from 'react-native-safe-area-context';
-import {TabBarIcon} from '@components/index';
-import Home from '@screens/Home';
-import Chat from '@screens/Chat';
-import Profile from '@screens/Profile';
-import Calendar from '@screens/Calendar';
-import {BottomRootStack} from '@lib/types';
-import {Paths} from '@constant/navigation';
 
 const Tab = createBottomTabNavigator<BottomRootStack>();
 
@@ -33,9 +30,9 @@ export const BottomStackScreen = () => {
 
       <Tab.Screen name={Paths.Chat}>{() => <Chat />}</Tab.Screen>
 
-      <Tab.Screen name={Paths.Profile}>{() => <Profile />}</Tab.Screen>
-
       <Tab.Screen name={Paths.Schedule}>{() => <Calendar />}</Tab.Screen>
+
+      <Tab.Screen name={Paths.Profile}>{() => <Profile />}</Tab.Screen>
     </Tab.Navigator>
   );
 };

@@ -14,7 +14,7 @@ type Props = {
   navigation: NavigationProp<AuthenticationRootStack>;
 };
 
-const SignIn = ({navigation}: Props) => {
+export const SignIn = ({navigation}: Props) => {
   const intl = useIntl();
   const theme = useAppTheme();
   const inset = useSafeAreaInsets();
@@ -81,5 +81,3 @@ const SignIn = ({navigation}: Props) => {
     </View>
   );
 };
-
-export default SignIn;

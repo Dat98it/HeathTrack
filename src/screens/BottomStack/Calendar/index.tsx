@@ -1,12 +1,10 @@
 import React from 'react';
 import {SafeAreaView, Text} from 'react-native';
 
-const Profile = () => {
+export const Calendar = () => {
   return (
     <SafeAreaView>
-      <Text>Profile Component</Text>
+      <Text>Calendar Component</Text>
     </SafeAreaView>
   );
 };
-
-export default Profile;

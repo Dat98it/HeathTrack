@@ -14,7 +14,7 @@ type Props = {
   navigation: NavigationProp<AuthenticationRootStack>;
 };
 
-const ResetPassword = ({navigation}: Props) => {
+export const ResetPassword = ({navigation}: Props) => {
   const intl = useIntl();
   const theme = useAppTheme();
   const inset = useSafeAreaInsets();
@@ -54,5 +54,3 @@ const ResetPassword = ({navigation}: Props) => {
     </View>
   );
 };
-
-export default ResetPassword;

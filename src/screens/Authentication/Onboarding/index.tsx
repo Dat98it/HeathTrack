@@ -33,7 +33,7 @@ const steps: StepItem[] = [
   },
 ];
 
-const OnboardingScreen = () => {
+export const OnboardingScreen = () => {
   const flatlistRef = useRef<any>(undefined);
 
   const navigation = useNavigation<NavigationProp<AuthenticationRootStack>>();
@@ -85,5 +85,3 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
-
-export default OnboardingScreen;

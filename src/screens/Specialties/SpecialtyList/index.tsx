@@ -1,32 +1,21 @@
 import {SpecialtiesHeader} from '@components/index';
 import {useAppTheme} from '@hooks/theme';
-import {RouteProp, useRoute} from '@react-navigation/native';
 import React from 'react';
 import {View} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import ListDoctor from './components/ListDoctor';
 import makeStyles from './styles';
+import Categories from './components/Categories';
 
-type ParamList = {
-  params: {
-    specialty: string;
-  };
-};
-
-const SpecialtyDetail = () => {
-  const {params} = useRoute<RouteProp<ParamList, 'params'>>();
-
+export const SpecialtyList = () => {
   const inset = useSafeAreaInsets();
   const theme = useAppTheme();
   const styles = makeStyles(theme, inset);
 
   return (
     <View style={styles.container}>
-      <SpecialtiesHeader title={params?.specialty} />
+      <SpecialtiesHeader />
 
-      <ListDoctor />
+      <Categories />
     </View>
   );
 };
-
-export default SpecialtyDetail;

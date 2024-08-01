@@ -1,14 +1,29 @@
+import {Paths} from '@constant/navigation';
+
 export type AppRootStackParams = {
+  Authentication: undefined;
   BottomStack: undefined;
   SpecialtiesStack:
     | undefined
     | {
-        screen: string;
+        screen: Paths.SpecialtyList | Paths.SpecialtyDetail;
         params: {
           specialty: string;
         };
       };
-  Authentication: undefined;
+  DoctorStack:
+    | undefined
+    | {
+        screen:
+          | Paths.ListDoctor
+          | Paths.InfoDoctor
+          | Paths.RatingDoctor
+          | Paths.FavouriteDoctor
+          | Paths.DoctorByGender;
+        params: {
+          doctorId: string;
+        };
+      };
 };
 
 export type AuthenticationRootStack = {

@@ -3,11 +3,14 @@ import {AuthenticationRootStack} from '@lib/types';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import OnboardingScreen from '@screens/Onboarding';
-import ResetPassword from '@screens/ResetPassword';
-import SignIn from '@screens/SignIn';
-import SignUp from '@screens/SignUp';
-import Welcome from '@screens/Welcome';
+import {
+  OnboardingScreen,
+  ResetPassword,
+  SignIn,
+  SignUp,
+  Welcome,
+} from '@screens/Authentication';
+
 import React, {useEffect, useState} from 'react';
 import {View} from 'react-native';
 
@@ -53,6 +56,7 @@ export const Authentication = () => {
         name={Paths.OnBoarding}
         component={OnboardingScreen}
       />
+
       <AuthenticationStack.Screen name={Paths.Welcome} component={Welcome} />
 
       <AuthenticationStack.Screen name={Paths.SignIn} component={SignIn} />

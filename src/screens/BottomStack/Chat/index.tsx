@@ -1,12 +1,10 @@
 import React from 'react';
 import {SafeAreaView, Text} from 'react-native';
 
-const Calendar = () => {
+export const Chat = () => {
   return (
     <SafeAreaView>
-      <Text>Calendar Component</Text>
+      <Text>Chat Component</Text>
     </SafeAreaView>
   );
 };
-
-export default Calendar;

@@ -8,7 +8,7 @@ import {UpcomingSchedule} from './components/UpcomingSchedule';
 import Specialties from './components/Specialties';
 import {HomeHeader} from '@components/index';
 
-const Home = () => {
+export const Home = () => {
   const inset = useSafeAreaInsets();
   const theme = useAppTheme();
   const styles = makeStyles(theme, inset);
@@ -27,5 +27,3 @@ const Home = () => {
     </View>
   );
 };
-
-export default Home;
