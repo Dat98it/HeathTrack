@@ -1,5 +1,10 @@
 {
+  "sort_by": "Sort By",
+  "filter": "Filter",
+  "find_your_doctor": "Find Your Doctor",
   "categories": "Categories",
+  "orthopedics": "Orthopedics",
+  "ophthalmology": "Ophthalmology",
   "cardiology": "Cardiology",
   "dermatology": "Dermatology",
   "general_medicine": "General Medicine",
