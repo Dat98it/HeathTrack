@@ -34,3 +34,4 @@ export {default as CheckYourMedicalHistory} from './images/CheckYourMedicalHisto
 export {default as AppIcon} from './images/AppIcon.png';
 export {default as ProfileExample} from './images/profile-example.png';
 export {default as SpecialityIcon} from './images/speciality.png';
+export {default as DoctorAvatar} from './images/DoctorAvatar.png';

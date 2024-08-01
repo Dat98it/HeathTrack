@@ -8,18 +8,22 @@ import {useNavigation} from '@react-navigation/native';
 import {Text} from '@components/Text';
 import {FormattedMessage} from 'react-intl';
 
-export const SpecialtiesHeader = () => {
+type Props = {title?: string; onPress?: () => void};
+
+export const SpecialtiesHeader = ({title, onPress}: Props) => {
   const navigation = useNavigation();
   const theme = useAppTheme();
   const styles = makeStyles(theme);
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.backButton} onPress={navigation.goBack}>
+      <TouchableOpacity
+        style={styles.backButton}
+        onPress={onPress ?? navigation.goBack}>
         <Feather name="arrow-left" size={30} color={theme.colors.white} />
       </TouchableOpacity>
       <Text style={styles.title}>
-        <FormattedMessage id="specialties" />
+        <FormattedMessage id={title ?? 'specialties'} />
       </Text>
       <Text style={styles.subtitle}>
         <FormattedMessage id="find_your_doctor" />

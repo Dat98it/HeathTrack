@@ -12,8 +12,14 @@ export type BottomRootStack = {
   Profile: undefined;
 };
 
+export type SpecialtyStack = {
+  Specialties: undefined;
+  SpecialtyDetail: {category: string};
+};
+
 export type AppRootStackParams = {
   BottomStack: undefined;
   Authentication: undefined;
-  Specialties: undefined;
-} & BottomRootStack;
+  SpecialtyStack: undefined;
+} & BottomRootStack &
+  SpecialtyStack;

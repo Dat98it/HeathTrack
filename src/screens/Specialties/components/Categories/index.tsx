@@ -9,14 +9,17 @@ import {
   OrthopedicsIcon,
 } from '@assets/index';
 import {Text} from '@components/Text';
+import {Paths} from '@constant/index';
+import {useAppNavigation} from '@hooks/navigation';
 import {useAppTheme} from '@hooks/theme';
 import React from 'react';
 import {FormattedMessage} from 'react-intl';
 import {FlatList, TouchableOpacity, View} from 'react-native';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Feather from 'react-native-vector-icons/Feather';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import makeStyles from './styles';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import {GradientView} from '@components/GradientView';
 
 const categories = [
   {name: 'cardiology', Icon: CadiologyIcon},
@@ -30,6 +33,7 @@ const categories = [
 ];
 
 const Categories = () => {
+  const navigation = useAppNavigation();
   const theme = useAppTheme();
   const inset = useSafeAreaInsets();
   const styles = makeStyles(theme, inset);
@@ -39,10 +43,12 @@ const Categories = () => {
       <Text style={styles.sortBy}>
         <FormattedMessage id="sort_by" />
       </Text>
-      <TouchableOpacity style={styles.sortButton}>
-        <Text style={styles.sortButtonText}>A</Text>
-        <FontAwesome name="long-arrow-right" color={theme.colors.white} />
-        <Text style={styles.sortButtonText}>Z</Text>
+      <TouchableOpacity>
+        <GradientView style={styles.sortButton}>
+          <Text style={styles.sortButtonText}>A</Text>
+          <FontAwesome name="long-arrow-right" color={theme.colors.white} />
+          <Text style={styles.sortButtonText}>Z</Text>
+        </GradientView>
       </TouchableOpacity>
       <TouchableOpacity style={styles.filterButton}>
         <Text style={styles.filterButtonText}>
@@ -68,7 +74,11 @@ const Categories = () => {
       ListHeaderComponent={renderHeader}
       style={styles.container}
       renderItem={({item}) => (
-        <TouchableOpacity style={styles.categoryButton}>
+        <TouchableOpacity
+          style={styles.categoryButton}
+          onPress={() =>
+            navigation.navigate(Paths.SpecialtyDetail, {category: item.name})
+          }>
           <View style={styles.categoryIcon}>
             <item.Icon />
           </View>
