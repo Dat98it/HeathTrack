@@ -2,7 +2,11 @@ import {Paths} from '@constant/navigation';
 
 export type AppRootStackParams = {
   Authentication: undefined;
-  BottomStack: undefined;
+  BottomStack:
+    | undefined
+    | {
+        screen: Paths.Home | Paths.Chat | Paths.Schedule | Paths.Profile;
+      };
   SpecialtiesStack:
     | undefined
     | {
@@ -20,8 +24,9 @@ export type AppRootStackParams = {
           | Paths.RatingDoctor
           | Paths.FavouriteDoctor
           | Paths.DoctorByGender;
-        params: {
+        params?: {
           doctorId: string;
+          gender: string;
         };
       };
 };

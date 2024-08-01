@@ -23,11 +23,16 @@ const Categories = () => {
       id: 1,
       title: 'favorite',
       Icon: FavouriteIcon,
+      onPress: () =>
+        navigation.navigate(Paths.DoctorStack, {
+          screen: Paths.FavouriteDoctor,
+        }),
     },
     {
       id: 2,
       title: 'doctor',
       Icon: StethoscopeIcon,
+      onPress: () => navigation.navigate(Paths.DoctorStack),
     },
     {
       id: 3,

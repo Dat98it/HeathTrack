@@ -15,6 +15,7 @@ import {DefaultTheme} from '@lib/theme';
 import {authSelector} from '@redux/reducer/auth';
 import {BottomStackScreen} from './BottomStackScreen';
 import {SpecialtiesStack} from './SpecialtiesStack';
+import {DoctorScreenStack} from './DoctorStackScreen';
 
 const AppRootStack = createNativeStackNavigator<AppRootStackParams>();
 
@@ -36,9 +37,16 @@ export const AppNavigator = () => {
                   component={BottomStackScreen}
                   options={{headerShown: false}}
                 />
+
                 <AppRootStack.Screen
                   name={Paths.SpecialtiesStack}
                   component={SpecialtiesStack}
+                  options={{headerShown: false}}
+                />
+
+                <AppRootStack.Screen
+                  name={Paths.DoctorStack}
+                  component={DoctorScreenStack}
                   options={{headerShown: false}}
                 />
               </>
