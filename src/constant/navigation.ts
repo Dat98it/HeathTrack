@@ -11,7 +11,7 @@ export enum Paths {
   ResetPassword = 'ResetPassword',
   OnBoarding = 'OnBoarding',
   Welcome = 'Welcome',
-  SpecialtyStack = 'SpecialtyStack',
+  SpecialtiesStack = 'SpecialtiesStack',
   Specialties = 'Specialties',
   SpecialtyDetail = 'SpecialtyDetail',
 }

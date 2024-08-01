@@ -1,7 +1,13 @@
 export type AppRootStackParams = {
   BottomStack: undefined;
-  Specialties: undefined;
-  SpecialtyDetail: {category: string};
+  SpecialtiesStack:
+    | undefined
+    | {
+        screen: string;
+        params: {
+          specialty: string;
+        };
+      };
   Authentication: undefined;
 };
 

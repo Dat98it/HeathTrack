@@ -77,7 +77,12 @@ const Categories = () => {
         <TouchableOpacity
           style={styles.categoryButton}
           onPress={() =>
-            navigation.navigate(Paths.SpecialtyDetail, {category: item.name})
+            navigation.navigate(Paths.SpecialtiesStack, {
+              screen: Paths.SpecialtyDetail,
+              params: {
+                specialty: item.name,
+              },
+            })
           }>
           <View style={styles.categoryIcon}>
             <item.Icon />

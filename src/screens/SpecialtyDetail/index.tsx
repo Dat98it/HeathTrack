@@ -9,7 +9,7 @@ import makeStyles from './styles';
 
 type ParamList = {
   params: {
-    category: string;
+    specialty: string;
   };
 };
 
@@ -22,7 +22,7 @@ const SpecialtyDetail = () => {
 
   return (
     <View style={styles.container}>
-      <SpecialtiesHeader title={params?.category} />
+      <SpecialtiesHeader title={params?.specialty} />
 
       <ListDoctor />
     </View>

@@ -38,7 +38,7 @@ const Categories = () => {
       id: 4,
       title: 'specialties',
       Icon: null,
-      onPress: () => navigation.navigate(Paths.Specialties),
+      onPress: () => navigation.navigate(Paths.SpecialtiesStack),
     },
     {
       id: 5,

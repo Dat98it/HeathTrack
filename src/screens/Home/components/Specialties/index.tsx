@@ -1,8 +1,3 @@
-import {useAppTheme} from '@hooks/theme';
-import React from 'react';
-import {TouchableOpacity, View} from 'react-native';
-import makeStyles from './styles';
-import {Text} from '@components/Text';
 import {
   CadiologyIcon,
   DermatologyIcon,
@@ -11,9 +6,14 @@ import {
   OdontologyIcon,
   OncologyIcon,
 } from '@assets/index';
-import {FormattedMessage} from 'react-intl';
-import {useAppNavigation} from '@hooks/navigation';
+import {Text} from '@components/Text';
 import {Paths} from '@constant/index';
+import {useAppNavigation} from '@hooks/navigation';
+import {useAppTheme} from '@hooks/theme';
+import React from 'react';
+import {FormattedMessage} from 'react-intl';
+import {TouchableOpacity, View} from 'react-native';
+import makeStyles from './styles';
 
 const specialties = [
   {name: 'cardiology', Icon: CadiologyIcon},
@@ -35,7 +35,7 @@ const Specialties = () => {
           <FormattedMessage id="specialties" />
         </Text>
         <TouchableOpacity
-          onPress={() => navigation.navigate(Paths.Specialties)}>
+          onPress={() => navigation.navigate(Paths.SpecialtiesStack)}>
           <Text style={styles.seeAll}>
             <FormattedMessage id="see_all" />
           </Text>
@@ -47,8 +47,11 @@ const Specialties = () => {
             key={index}
             style={styles.gridItem}
             onPress={() =>
-              navigation.navigate(Paths.SpecialtyDetail, {
-                category: specialty.name,
+              navigation.navigate(Paths.SpecialtiesStack, {
+                screen: Paths.SpecialtyDetail,
+                params: {
+                  specialty: specialty.name,
+                },
               })
             }>
             <View style={styles.gridIcon}>
