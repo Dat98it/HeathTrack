@@ -7,7 +7,7 @@ import makeStyles from './styles';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 type Props = {
-  title: string;
+  title?: string;
   onClickRightButton?: () => void;
 };
 
@@ -32,11 +32,14 @@ export const FilterButtons: FC<Props> = ({title, onClickRightButton}) => {
           <FormattedMessage id="filter" />
         </Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.doctors} onPress={onClickRightButton}>
-        <Text style={styles.doctorsLabel}>
-          <FormattedMessage id={title} />
-        </Text>
-      </TouchableOpacity>
+
+      {title && (
+        <TouchableOpacity style={styles.doctors} onPress={onClickRightButton}>
+          <Text style={styles.doctorsLabel}>
+            <FormattedMessage id={title} />
+          </Text>
+        </TouchableOpacity>
+      )}
     </View>
   );
 };
