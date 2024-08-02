@@ -1,16 +1,16 @@
+import {Text} from '@components/Text';
 import {useAppTheme} from '@hooks/theme';
-import React from 'react';
+import {Doctor} from '@lib/types';
+import React, {FC} from 'react';
 import {Image, TouchableOpacity, View} from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
 import makeStyles from './styles';
-import {Doctor} from '@lib/types';
-import {Text} from '@components/Text';
 
 type Props = {
   doctor: Doctor;
 };
 
-const ListItem = ({doctor}: Props) => {
+const ListItem: FC<Props> = ({doctor}) => {
   const theme = useAppTheme();
   const styles = makeStyles(theme);
 
