@@ -55,7 +55,9 @@ const Categories = () => {
           <FormattedMessage id="filter" />
         </Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.doctors}>
+      <TouchableOpacity
+        style={styles.doctors}
+        onPress={() => navigation.navigate(Paths.DoctorStack)}>
         <Text style={styles.doctorsLabel}>
           <FormattedMessage id="doctor" />
         </Text>

@@ -5,12 +5,15 @@ import React, {FC} from 'react';
 import {Image, TouchableOpacity, View} from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
 import makeStyles from './styles';
+import {useAppNavigation} from '@hooks/navigation';
+import {Paths} from '@constant/navigation';
 
 type Props = {
   doctor: Doctor;
 };
 
 const ListItem: FC<Props> = ({doctor}) => {
+  const navigation = useAppNavigation();
   const theme = useAppTheme();
   const styles = makeStyles(theme);
 
@@ -26,7 +29,16 @@ const ListItem: FC<Props> = ({doctor}) => {
         </View>
 
         <View style={styles.iconsContainer}>
-          <TouchableOpacity style={styles.infoButton}>
+          <TouchableOpacity
+            style={styles.infoButton}
+            onPress={() =>
+              navigation.navigate(Paths.DoctorStack, {
+                screen: Paths.InforDoctor,
+                params: {
+                  doctorId: doctor.id,
+                },
+              })
+            }>
             <Text style={styles.infoButtonText}>Info</Text>
           </TouchableOpacity>
           <View style={styles.iconList}>

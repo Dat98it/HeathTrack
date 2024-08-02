@@ -8,9 +8,10 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 type Props = {
   title: string;
+  onClickRightButton?: () => void;
 };
 
-export const FilterButtons: FC<Props> = ({title}) => {
+export const FilterButtons: FC<Props> = ({title, onClickRightButton}) => {
   const theme = useAppTheme();
   const styles = makeStyles(theme);
 
@@ -31,7 +32,7 @@ export const FilterButtons: FC<Props> = ({title}) => {
           <FormattedMessage id="filter" />
         </Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.doctors}>
+      <TouchableOpacity style={styles.doctors} onPress={onClickRightButton}>
         <Text style={styles.doctorsLabel}>
           <FormattedMessage id={title} />
         </Text>

@@ -3,7 +3,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {
   DoctorByGender,
   FavouriteDoctor,
-  InfoDoctor,
+  InforDoctor,
   ListDoctor,
   RatingDoctor,
 } from '@screens/DoctorStack';
@@ -18,7 +18,7 @@ export const DoctorScreenStack = () => {
       initialRouteName={Paths.ListDoctor}>
       <Stack.Screen name={Paths.ListDoctor} component={ListDoctor} />
 
-      <Stack.Screen name={Paths.InfoDoctor} component={InfoDoctor} />
+      <Stack.Screen name={Paths.InforDoctor} component={InforDoctor} />
 
       <Stack.Screen name={Paths.FavouriteDoctor} component={FavouriteDoctor} />
 

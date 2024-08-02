@@ -19,7 +19,7 @@ export enum Paths {
 
   DoctorStack = 'DoctorStack',
   ListDoctor = 'ListDoctor',
-  InfoDoctor = 'InfoDoctor',
+  InforDoctor = 'InforDoctor',
   RatingDoctor = 'RatingDoctor',
   FavouriteDoctor = 'FavouriteDoctor',
   DoctorByGender = 'DoctorByGender',

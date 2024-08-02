@@ -5,6 +5,10 @@ export type NotificationParams = {
   notification: Notification;
 };
 
+export type DoctorParams = {
+  doctorId: number;
+};
+
 export type SpecialtyParams = {
   specialty: string;
 };
@@ -27,11 +31,11 @@ export type AppRootStackParams = {
     | {
         screen:
           | Paths.ListDoctor
-          | Paths.InfoDoctor
+          | Paths.InforDoctor
           | Paths.RatingDoctor
           | Paths.FavouriteDoctor
           | Paths.DoctorByGender;
-        params?: NotificationParams;
+        params?: DoctorParams;
       };
   NotificationStack:
     | undefined
