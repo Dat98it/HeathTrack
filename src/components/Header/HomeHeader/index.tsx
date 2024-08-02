@@ -19,7 +19,11 @@ export const HomeHeader = () => {
       <View style={styles.iconsContainer}>
         <TouchableOpacity
           style={styles.icon}
-          onPress={() => navigation.navigate(Paths.Notifications)}>
+          onPress={() =>
+            navigation.navigate(Paths.NotificationStack, {
+              screen: Paths.ListNotification,
+            })
+          }>
           <Entypo name="bell" size={24} color={theme.colors.black} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.icon}>

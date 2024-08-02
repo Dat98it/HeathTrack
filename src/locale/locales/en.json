@@ -35,6 +35,7 @@
   "groups": "Groups",
   "events": "Events",
   "notifications": "Notifications",
+  "notification": "Notification",
   "reset_pasword": "Reset Password",
   "reset_pasword_description": "Enter your Email then we will send you a new password",
   "aready_account": "You have an account? ",

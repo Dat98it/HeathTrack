@@ -35,6 +35,7 @@
   "groups": "Nhóm",
   "events": "Sự kiện",
   "notifications": "Thông báo",
+  "notification": "Thông báo",
   "reset_pasword": "Đặt lại mật khẩu",
   "reset_pasword_description": "Nhập Email của bạn sau đó chúng tôi sẽ gửi cho bạn mật khẩu mới",
   "aready_account": "Bạn đã có tài khoản? ",

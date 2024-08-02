@@ -1,2 +1,2 @@
 export * from './SearchNotification';
-export * from './ListNotification';
+export * from './Notifications';

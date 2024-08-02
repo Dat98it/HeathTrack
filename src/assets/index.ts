@@ -22,6 +22,7 @@ export {default as PhamacyIcon} from './icons/pharmacy.svg';
 export {default as RecordIcon} from './icons/record.svg';
 export {default as PencilRoundIcon} from './icons/pencil-round.svg';
 export {default as HomeIcon} from './icons/HomeIcon';
+export {default as ChatIcon} from './icons/ChatIcon';
 export {default as MessageIcon} from './icons/MessageIcon';
 export {default as UserProfileIcon} from './icons/UserProfile';
 export {default as BookingIcon} from './icons/BookingIcon';

@@ -4,10 +4,15 @@ import {StyleSheet, Text as RNText, TextStyle, Platform} from 'react-native';
 type Props = {
   style?: TextStyle;
   children: React.ReactNode;
+  numberOfLines?: number;
 };
-export const Text = ({style, children}: Props) => {
+export const Text = ({style, children, ...props}: Props) => {
   const styles = makeStyles();
-  return <RNText style={[styles.text, style]}>{children}</RNText>;
+  return (
+    <RNText {...props} style={[styles.text, style]}>
+      {children}
+    </RNText>
+  );
 };
 
 const makeStyles = () =>

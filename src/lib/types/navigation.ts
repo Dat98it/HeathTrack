@@ -1,4 +1,13 @@
 import {Paths} from '@constant/navigation';
+import {Notification} from './notification';
+
+export type NotificationParams = {
+  notification: Notification;
+};
+
+export type SpecialtyParams = {
+  specialty: string;
+};
 
 export type AppRootStackParams = {
   Authentication: undefined;
@@ -11,9 +20,7 @@ export type AppRootStackParams = {
     | undefined
     | {
         screen: Paths.SpecialtyList | Paths.SpecialtyDetail;
-        params: {
-          specialty: string;
-        };
+        params: SpecialtyParams;
       };
   DoctorStack:
     | undefined
@@ -24,12 +31,14 @@ export type AppRootStackParams = {
           | Paths.RatingDoctor
           | Paths.FavouriteDoctor
           | Paths.DoctorByGender;
-        params?: {
-          doctorId: string;
-          gender: string;
-        };
+        params?: NotificationParams;
       };
-  Notifications: undefined;
+  NotificationStack:
+    | undefined
+    | {
+        screen: Paths.ListNotification | Paths.DetailNotification;
+        params?: NotificationParams;
+      };
 };
 
 export type AuthenticationRootStack = {

@@ -1,5 +1,6 @@
 import {SpecialtiesHeader} from '@components/index';
 import {useAppTheme} from '@hooks/theme';
+import {SpecialtyParams} from '@lib/types';
 import {RouteProp, useRoute} from '@react-navigation/native';
 import React from 'react';
 import {View} from 'react-native';
@@ -8,9 +9,7 @@ import ListDoctor from './components/ListDoctor';
 import makeStyles from './styles';
 
 type ParamList = {
-  params: {
-    specialty: string;
-  };
+  params: SpecialtyParams;
 };
 
 export const SpecialtyDetail = () => {

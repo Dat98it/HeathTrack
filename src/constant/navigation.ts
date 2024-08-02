@@ -24,7 +24,9 @@ export enum Paths {
   FavouriteDoctor = 'FavouriteDoctor',
   DoctorByGender = 'DoctorByGender',
 
-  Notifications = 'Notifications',
+  NotificationStack = 'NotificationStack',
+  ListNotification = 'ListNotification',
+  DetailNotification = 'DetailNotification',
 }
 
 export enum BottomRootStack {
