@@ -18,6 +18,7 @@ import {BottomStackScreen} from './BottomStackScreen';
 import {DoctorScreenStack} from './DoctorStackScreen';
 import {NotificationStack} from './NotificationStackScreen';
 import {SpecialtiesStack} from './SpecialtiesStack';
+import EditProfile from '@screens/EditProfile';
 
 const AppRootStack = createNativeStackNavigator<AppRootStackParams>();
 
@@ -55,6 +56,11 @@ export const AppNavigator = () => {
                 <AppRootStack.Screen
                   name={Paths.NotificationStack}
                   component={NotificationStack}
+                  options={{headerShown: false}}
+                />
+                <AppRootStack.Screen
+                  name={Paths.EditProfile}
+                  component={EditProfile}
                   options={{headerShown: false}}
                 />
               </>

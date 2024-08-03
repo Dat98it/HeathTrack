@@ -9,6 +9,7 @@ const makeStyles = (theme: AppTheme, inset: EdgeInsets) =>
       backgroundColor: theme.colors.white,
       paddingTop: inset.top,
       gap: 19,
+      paddingBottom: inset.bottom,
     },
     buttons: {
       flexDirection: 'row',

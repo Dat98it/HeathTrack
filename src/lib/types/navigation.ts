@@ -43,6 +43,7 @@ export type AppRootStackParams = {
         screen: Paths.ListNotification | Paths.DetailNotification;
         params?: NotificationParams;
       };
+  EditProfile: undefined;
 };
 
 export type AuthenticationRootStack = {

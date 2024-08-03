@@ -27,6 +27,8 @@ export enum Paths {
   NotificationStack = 'NotificationStack',
   ListNotification = 'ListNotification',
   DetailNotification = 'DetailNotification',
+
+  EditProfile = 'EditProfile',
 }
 
 export enum BottomRootStack {

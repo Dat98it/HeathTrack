@@ -64,56 +64,56 @@ const FavouriteServices = () => {
   };
 
   return (
-    <ScrollView
-      contentContainerStyle={styles.container}
-      showsVerticalScrollIndicator={false}>
-      {services.map((service, index) => {
-        return (
-          <View key={index} style={styles.serviceContainer}>
-            <TouchableOpacity onPress={() => toggleExpand(service.name)}>
-              <GradientView style={styles.serviceHeader}>
-                <Icon name="heart" size={20} color={theme.colors.white} />
-                <Text style={styles.serviceName}>
-                  <FormattedMessage id={service.name} />
-                </Text>
-                <Icon
-                  name={
-                    expandedService === service.name
-                      ? 'chevron-up'
-                      : 'chevron-down'
-                  }
-                  size={20}
-                  color={theme.colors.white}
-                />
-              </GradientView>
-            </TouchableOpacity>
-
-            {expandedService === service.name && (
-              <View>
-                <View style={styles.serviceDescriptionContainer}>
-                  <Text style={styles.serviceDescription}>
-                    {service.description}
+    <View style={styles.container}>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        {services.map((service, index) => {
+          return (
+            <View key={index} style={styles.serviceContainer}>
+              <TouchableOpacity onPress={() => toggleExpand(service.name)}>
+                <GradientView style={styles.serviceHeader}>
+                  <Icon name="heart" size={20} color={theme.colors.white} />
+                  <Text style={styles.serviceName}>
+                    <FormattedMessage id={service.name} />
                   </Text>
-                </View>
+                  <Icon
+                    name={
+                      expandedService === service.name
+                        ? 'chevron-up'
+                        : 'chevron-down'
+                    }
+                    size={20}
+                    color={theme.colors.white}
+                  />
+                </GradientView>
+              </TouchableOpacity>
 
-                <TouchableOpacity
-                  style={styles.footer}
-                  onPress={() =>
-                    navigation.navigate(Paths.SpecialtiesStack, {
-                      screen: Paths.SpecialtyDetail,
-                      params: {
-                        specialty: service.name,
-                      },
-                    })
-                  }>
-                  <Text style={styles.footerText}>Looking Doctors</Text>
-                </TouchableOpacity>
-              </View>
-            )}
-          </View>
-        );
-      })}
-    </ScrollView>
+              {expandedService === service.name && (
+                <View>
+                  <View style={styles.serviceDescriptionContainer}>
+                    <Text style={styles.serviceDescription}>
+                      {service.description}
+                    </Text>
+                  </View>
+
+                  <TouchableOpacity
+                    style={styles.footer}
+                    onPress={() =>
+                      navigation.navigate(Paths.SpecialtiesStack, {
+                        screen: Paths.SpecialtyDetail,
+                        params: {
+                          specialty: service.name,
+                        },
+                      })
+                    }>
+                    <Text style={styles.footerText}>Looking Doctors</Text>
+                  </TouchableOpacity>
+                </View>
+              )}
+            </View>
+          );
+        })}
+      </ScrollView>
+    </View>
   );
 };
 

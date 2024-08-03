@@ -5,7 +5,7 @@ const makeStyles = (theme: AppTheme) =>
   StyleSheet.create({
     container: {
       paddingHorizontal: 31,
-      marginTop: 16,
+      flex: 1,
     },
     serviceContainer: {
       marginBottom: 10,

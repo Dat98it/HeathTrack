@@ -8,16 +8,25 @@ import {FlatList, Image, TouchableOpacity, View} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import makeStyles from './styles';
+import {Paths} from '@constant/navigation';
 
 type MenuItem = {
   id: string;
   icon: string;
   label: string;
+  navigateScreen?: string;
+  params?: object;
 };
 
 const profileData = [
-  {id: '1', icon: 'user', label: 'Profile'},
-  {id: '2', icon: 'heart', label: 'Favorite'},
+  {id: '1', icon: 'user', label: 'Profile', navigateScreen: Paths.EditProfile},
+  {
+    id: '2',
+    icon: 'heart',
+    label: 'Favorite',
+    navigateScreen: Paths.DoctorStack,
+    params: {screen: Paths.FavouriteDoctor},
+  },
   {id: '3', icon: 'credit-card', label: 'Payment Method'},
   {id: '4', icon: 'lock', label: 'Privacy Policy'},
   {id: '5', icon: 'cog', label: 'Settings'},
@@ -26,12 +35,20 @@ const profileData = [
 ];
 
 const Item = ({item}: {item: MenuItem}) => {
+  const navigation = useAppNavigation();
   const inset = useSafeAreaInsets();
   const theme = useAppTheme();
   const styles = makeStyles(theme, inset);
 
   return (
-    <TouchableOpacity style={styles.item}>
+    <TouchableOpacity
+      style={styles.item}
+      disabled={!item.navigateScreen}
+      onPress={() =>
+        item.navigateScreen
+          ? navigation.navigate(item.navigateScreen as any, item.params)
+          : undefined
+      }>
       <View style={styles.itemIcon}>
         <FontAwesome name={item.icon} size={24} color={theme.colors.white} />
       </View>
