@@ -35,7 +35,7 @@ export const Welcome = ({navigation}: Props) => {
         />
         <TouchableOpacity
           style={[styles.button, styles.signupButton]}
-          onPress={() => navigation.navigate('SignUp')}>
+          onPress={() => navigation.navigate(Paths.SignUp)}>
           <Text style={styles.signupButtonText}>Sign Up</Text>
         </TouchableOpacity>
       </View>

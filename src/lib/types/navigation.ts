@@ -1,9 +1,4 @@
 import {Paths} from '@constant/navigation';
-import {Notification} from './notification';
-
-export type NotificationParams = {
-  notification: Notification;
-};
 
 export type DoctorParams = {
   doctorId: number;
@@ -14,40 +9,17 @@ export type SpecialtyParams = {
 };
 
 export type AppRootStackParams = {
+  HealthTrack:
+    | undefined
+    | {
+        screen: Paths;
+        params?: object;
+      };
   Authentication: undefined;
   BottomStack:
     | undefined
     | {
-        screen: Paths.Home | Paths.Chat | Paths.Schedule | Paths.Profile;
-      };
-  SpecialtiesStack:
-    | undefined
-    | {
-        screen: Paths.SpecialtyList | Paths.SpecialtyDetail;
-        params: SpecialtyParams;
-      };
-  DoctorStack:
-    | undefined
-    | {
-        screen:
-          | Paths.ListDoctor
-          | Paths.InforDoctor
-          | Paths.RatingDoctor
-          | Paths.FavouriteDoctor
-          | Paths.DoctorByGender;
-        params?: DoctorParams;
-      };
-  NotificationStack:
-    | undefined
-    | {
-        screen: Paths.ListNotification | Paths.DetailNotification;
-        params?: NotificationParams;
-      };
-  EditProfile: undefined;
-  SettingStack:
-    | undefined
-    | {
-        screen: Paths.NotificationSetting | Paths.PasswordManager;
+        screen: Paths;
       };
 };
 

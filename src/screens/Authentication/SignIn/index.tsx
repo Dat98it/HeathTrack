@@ -1,12 +1,12 @@
 import {EmailIcon, PasswordIcon} from '@assets/index';
 import {AuthHeader, GradientButton, Input, Text} from '@components/index';
+import {Paths} from '@constant/navigation';
 import {useAppTheme} from '@hooks/theme';
 import {AuthenticationRootStack} from '@lib/types';
 import {NavigationProp} from '@react-navigation/native';
 import React from 'react';
 import {useIntl} from 'react-intl';
-import {TouchableOpacity, View} from 'react-native';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import {SafeAreaView, TouchableOpacity, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {makeStyles} from './style';
 
@@ -17,15 +17,14 @@ type Props = {
 export const SignIn = ({navigation}: Props) => {
   const intl = useIntl();
   const theme = useAppTheme();
-  const inset = useSafeAreaInsets();
-  const styles = makeStyles(theme, inset);
+  const styles = makeStyles(theme);
 
   const handleSignIn = () => {
     // Handle sign in logic here
   };
 
   return (
-    <View style={styles.loginPage}>
+    <SafeAreaView style={styles.loginPage}>
       <AuthHeader title="sign_in" />
 
       <View style={styles.container}>
@@ -49,7 +48,7 @@ export const SignIn = ({navigation}: Props) => {
 
         <TouchableOpacity
           style={styles.forgotPassword}
-          onPress={() => navigation.navigate('ResetPassword')}>
+          onPress={() => navigation.navigate(Paths.ResetPassword)}>
           <Text style={styles.forgotPasswordLabel}>
             {intl.formatMessage({id: 'forgot_password'})}
           </Text>
@@ -71,13 +70,13 @@ export const SignIn = ({navigation}: Props) => {
           <Text style={styles.label}>
             {intl.formatMessage({id: 'dont_have_account'})}
           </Text>
-          <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
+          <TouchableOpacity onPress={() => navigation.navigate(Paths.SignUp)}>
             <Text style={styles.signUp}>
               {intl.formatMessage({id: 'sign_up'})}
             </Text>
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };

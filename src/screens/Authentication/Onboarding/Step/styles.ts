@@ -1,17 +1,14 @@
 import {AppTheme} from '@lib/theme';
-import {Dimensions, Platform, StyleSheet} from 'react-native';
-import {EdgeInsets} from 'react-native-safe-area-context';
+import {Platform, StyleSheet} from 'react-native';
 
-const makeStyles = (theme: AppTheme, inset: EdgeInsets) =>
+const makeStyles = (theme: AppTheme) =>
   StyleSheet.create({
     container: {
       flex: 1,
-      width: Dimensions.get('window').width,
       padding: 20,
       alignItems: 'center',
       justifyContent: 'space-between',
       backgroundColor: theme.colors.white,
-      paddingTop: inset.top,
     },
     skipButton: {
       alignSelf: 'flex-end',

@@ -24,7 +24,7 @@ const Categories = () => {
       title: 'favorite',
       Icon: FavouriteIcon,
       onPress: () =>
-        navigation.navigate(Paths.DoctorStack, {
+        navigation.navigate(Paths.HealthTrack, {
           screen: Paths.FavouriteDoctor,
         }),
     },
@@ -32,7 +32,10 @@ const Categories = () => {
       id: 2,
       title: 'doctor',
       Icon: StethoscopeIcon,
-      onPress: () => navigation.navigate(Paths.DoctorStack),
+      onPress: () =>
+        navigation.navigate(Paths.HealthTrack, {
+          screen: Paths.ListDoctor,
+        }),
     },
     {
       id: 3,
@@ -43,7 +46,10 @@ const Categories = () => {
       id: 4,
       title: 'specialties',
       Icon: null,
-      onPress: () => navigation.navigate(Paths.SpecialtiesStack),
+      onPress: () =>
+        navigation.navigate(Paths.HealthTrack, {
+          screen: Paths.SpecialtyList,
+        }),
     },
     {
       id: 5,
@@ -70,6 +76,7 @@ const Categories = () => {
           <TouchableOpacity
             key={category.id}
             style={styles.menuItem}
+            disabled={!category.onPress}
             onPress={category.onPress}>
             {category.Icon ? (
               <category.Icon />

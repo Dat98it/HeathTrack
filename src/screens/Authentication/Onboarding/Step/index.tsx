@@ -8,10 +8,15 @@ import {GradientButton} from '@components/GradientButton';
 import {Text} from '@components/Text';
 import {useAppTheme} from '@hooks/theme';
 import React from 'react';
-import {Image, ImageBackground, TouchableOpacity, View} from 'react-native';
+import {
+  Image,
+  ImageBackground,
+  SafeAreaView,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import makeStyles from './styles';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 type Props = {
   currentStep: number;
@@ -29,11 +34,10 @@ const sourceImage: any = {
 
 const Step = ({title, description, onClick, currentStep, onSkip}: Props) => {
   const theme = useAppTheme();
-  const inset = useSafeAreaInsets();
-  const styles = makeStyles(theme, inset);
+  const styles = makeStyles(theme);
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <TouchableOpacity style={styles.skipButton} onPress={onSkip}>
         <Text style={styles.skipButtonText}>Skip</Text>
         <MaterialIcons
@@ -67,7 +71,7 @@ const Step = ({title, description, onClick, currentStep, onSkip}: Props) => {
         style={styles.nextButton}
         onPress={onClick}
       />
-    </View>
+    </SafeAreaView>
   );
 };
 

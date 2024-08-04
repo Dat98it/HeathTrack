@@ -1,12 +1,10 @@
 import {AppTheme} from '@lib/theme';
 import {StyleSheet} from 'react-native';
-import {EdgeInsets} from 'react-native-safe-area-context';
 
-const makeStyles = (theme: AppTheme, inset: EdgeInsets) =>
+const makeStyles = (theme: AppTheme) =>
   StyleSheet.create({
     container: {
       backgroundColor: theme.colors.white,
-      marginBottom: inset.bottom,
     },
     grid: {
       justifyContent: 'space-between',

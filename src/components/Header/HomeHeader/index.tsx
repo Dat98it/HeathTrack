@@ -20,13 +20,19 @@ export const HomeHeader = () => {
         <TouchableOpacity
           style={styles.icon}
           onPress={() =>
-            navigation.navigate(Paths.NotificationStack, {
+            navigation.navigate(Paths.HealthTrack, {
               screen: Paths.ListNotification,
             })
           }>
           <Entypo name="bell" size={24} color={theme.colors.black} />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.icon}>
+        <TouchableOpacity
+          style={styles.icon}
+          onPress={() =>
+            navigation.navigate(Paths.HealthTrack, {
+              screen: Paths.Settings,
+            })
+          }>
           <FontAwesome name="cog" size={24} color={theme.colors.black} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.icon}>
@@ -40,7 +46,13 @@ export const HomeHeader = () => {
         </View>
         <View style={styles.imageContainer}>
           <Image source={ProfileExample} style={styles.userImage} />
-          <TouchableOpacity style={styles.cameraIcon}>
+          <TouchableOpacity
+            style={styles.cameraIcon}
+            onPress={() =>
+              navigation.navigate(Paths.HealthTrack, {
+                screen: Paths.EditProfile,
+              })
+            }>
             <PencilRoundIcon />
           </TouchableOpacity>
         </View>

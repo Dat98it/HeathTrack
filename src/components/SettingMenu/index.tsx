@@ -1,17 +1,15 @@
-import {useAppNavigation} from '@hooks/navigation';
 import {useAppTheme} from '@hooks/theme';
 import React from 'react';
+import {FormattedMessage} from 'react-intl';
 import {FlatList, Text, TouchableOpacity, View} from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import makeStyles from './styles';
-import {FormattedMessage} from 'react-intl';
 
 type MenuItem = {
   id: string;
   Icon: any;
   label: string;
-  navigateScreen?: string;
-  params?: object;
+  onPress?: () => void;
 };
 
 type Props = {
@@ -34,19 +32,14 @@ export const SettingMenu = ({data}: Props) => {
 };
 
 const Item = ({item: {Icon, ...item}}: {item: MenuItem}) => {
-  const navigation = useAppNavigation();
   const theme = useAppTheme();
   const styles = makeStyles(theme);
 
   return (
     <TouchableOpacity
       style={styles.item}
-      disabled={!item.navigateScreen}
-      onPress={() =>
-        item.navigateScreen
-          ? navigation.navigate(item.navigateScreen as any, item.params)
-          : undefined
-      }>
+      disabled={!item.onPress}
+      onPress={item.onPress}>
       <View style={styles.itemIcon}>
         <Icon />
       </View>

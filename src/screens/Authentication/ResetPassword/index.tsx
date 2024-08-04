@@ -6,8 +6,7 @@ import {AuthenticationRootStack} from '@lib/types';
 import {NavigationProp} from '@react-navigation/native';
 import React from 'react';
 import {useIntl} from 'react-intl';
-import {TouchableOpacity, View} from 'react-native';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import {SafeAreaView, TouchableOpacity, View} from 'react-native';
 import {makeStyles} from './style';
 
 type Props = {
@@ -17,11 +16,10 @@ type Props = {
 export const ResetPassword = ({navigation}: Props) => {
   const intl = useIntl();
   const theme = useAppTheme();
-  const inset = useSafeAreaInsets();
-  const styles = makeStyles(theme, inset);
+  const styles = makeStyles(theme);
 
   return (
-    <View style={styles.loginPage}>
+    <SafeAreaView style={styles.loginPage}>
       <AuthHeader title="reset_pasword" />
 
       <View style={styles.container}>
@@ -51,6 +49,6 @@ export const ResetPassword = ({navigation}: Props) => {
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };

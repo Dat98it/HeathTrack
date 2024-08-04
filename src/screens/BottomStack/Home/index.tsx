@@ -1,29 +1,27 @@
-import React from 'react';
-import {ScrollView, View} from 'react-native';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import makeStyles from './styles';
-import {useAppTheme} from '@hooks/theme';
-import Categories from './components/Categories';
-import {UpcomingSchedule} from './components/UpcomingSchedule';
-import Specialties from './components/Specialties';
 import {HomeHeader} from '@components/index';
+import {useAppTheme} from '@hooks/theme';
+import React from 'react';
+import {SafeAreaView, ScrollView} from 'react-native';
+import Categories from './components/Categories';
+import Specialties from './components/Specialties';
+import {UpcomingSchedule} from './components/UpcomingSchedule';
+import makeStyles from './styles';
 
 export const Home = () => {
-  const inset = useSafeAreaInsets();
   const theme = useAppTheme();
-  const styles = makeStyles(theme, inset);
+  const styles = makeStyles(theme);
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <HomeHeader />
 
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <Categories />
 
         <UpcomingSchedule />
 
         <Specialties />
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 };

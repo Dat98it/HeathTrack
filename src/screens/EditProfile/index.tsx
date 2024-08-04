@@ -6,25 +6,24 @@ import {useAppTheme} from '@hooks/theme';
 import React from 'react';
 import {
   ImageBackground,
+  SafeAreaView,
   ScrollView,
   TouchableOpacity,
   View,
 } from 'react-native';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import {Input} from '@components/Fields';
 import makeStyles from './styles';
 
-const EditProfile = () => {
+export const EditProfile = () => {
   const navigation = useAppNavigation();
-  const inset = useSafeAreaInsets();
   const theme = useAppTheme();
-  const styles = makeStyles(theme, inset);
+  const styles = makeStyles(theme);
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <GradientView>
           <View style={styles.header}>
@@ -82,8 +81,6 @@ const EditProfile = () => {
           </TouchableOpacity>
         </View>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 };
-
-export default EditProfile;

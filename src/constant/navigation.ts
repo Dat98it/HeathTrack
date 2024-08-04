@@ -1,10 +1,5 @@
 export enum Paths {
-  BottomStack = 'BottomStack',
-  AppStack = 'AppStack',
-  Home = 'Home',
-  Chat = 'Chat',
-  Schedule = 'Schedule',
-  Profile = 'Profile',
+  HealthTrack = 'HealthTrack',
 
   Authentication = 'Authentication',
   SignIn = 'SignIn',
@@ -13,24 +8,27 @@ export enum Paths {
   OnBoarding = 'OnBoarding',
   Welcome = 'Welcome',
 
-  SpecialtiesStack = 'SpecialtiesStack',
+  BottomStack = 'BottomStack',
+  AppStack = 'AppStack',
+  Home = 'Home',
+  Chat = 'Chat',
+  Schedule = 'Schedule',
+  Profile = 'Profile',
+
   SpecialtyList = 'SpecialtyList',
   SpecialtyDetail = 'SpecialtyDetail',
 
-  DoctorStack = 'DoctorStack',
   ListDoctor = 'ListDoctor',
   InforDoctor = 'InforDoctor',
   RatingDoctor = 'RatingDoctor',
   FavouriteDoctor = 'FavouriteDoctor',
   DoctorByGender = 'DoctorByGender',
 
-  NotificationStack = 'NotificationStack',
   ListNotification = 'ListNotification',
   DetailNotification = 'DetailNotification',
 
   EditProfile = 'EditProfile',
 
-  SettingStack = 'SettingStack',
   Settings = 'Settings',
   NotificationSetting = 'NotificationSetting',
   PasswordManager = 'PasswordManager',

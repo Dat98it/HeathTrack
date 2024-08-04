@@ -14,14 +14,9 @@ import {Authentication} from './Authentication';
 import {DefaultTheme} from '@lib/theme';
 import {authSelector} from '@redux/reducer/auth';
 
-import {BottomStackScreen} from './BottomStackScreen';
-import {DoctorScreenStack} from './DoctorStackScreen';
-import {NotificationStack} from './NotificationStackScreen';
-import {SpecialtiesStack} from './SpecialtiesStack';
-import EditProfile from '@screens/EditProfile';
-import {SettingStackScreen} from './SettingStack';
+import {HealthTrackStackScreen} from './HealthTrack';
 
-const AppRootStack = createNativeStackNavigator<AppRootStackParams>();
+const RootStack = createNativeStackNavigator<AppRootStackParams>();
 
 export const AppNavigator = () => {
   const locale = useSelector(localeSelector);
@@ -33,53 +28,23 @@ export const AppNavigator = () => {
       messages={messages[locale as keyof typeof messages]}>
       <PaperProvider theme={DefaultTheme}>
         <NavigationContainer>
-          <AppRootStack.Navigator>
+          <RootStack.Navigator>
             {auth ? (
               <>
-                <AppRootStack.Screen
-                  name={Paths.BottomStack}
-                  component={BottomStackScreen}
-                  options={{headerShown: false}}
-                />
-
-                <AppRootStack.Screen
-                  name={Paths.SpecialtiesStack}
-                  component={SpecialtiesStack}
-                  options={{headerShown: false}}
-                />
-
-                <AppRootStack.Screen
-                  name={Paths.DoctorStack}
-                  component={DoctorScreenStack}
-                  options={{headerShown: false}}
-                />
-
-                <AppRootStack.Screen
-                  name={Paths.NotificationStack}
-                  component={NotificationStack}
-                  options={{headerShown: false}}
-                />
-
-                <AppRootStack.Screen
-                  name={Paths.EditProfile}
-                  component={EditProfile}
-                  options={{headerShown: false}}
-                />
-
-                <AppRootStack.Screen
-                  name={Paths.SettingStack}
-                  component={SettingStackScreen}
+                <RootStack.Screen
+                  name={Paths.HealthTrack}
+                  component={HealthTrackStackScreen}
                   options={{headerShown: false}}
                 />
               </>
             ) : (
-              <AppRootStack.Screen
+              <RootStack.Screen
                 name={Paths.Authentication}
                 component={Authentication}
                 options={{headerShown: false}}
               />
             )}
-          </AppRootStack.Navigator>
+          </RootStack.Navigator>
         </NavigationContainer>
       </PaperProvider>
     </IntlProvider>

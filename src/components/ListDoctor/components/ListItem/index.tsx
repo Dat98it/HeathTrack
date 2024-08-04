@@ -32,7 +32,7 @@ const ListItem: FC<Props> = ({doctor}) => {
           <TouchableOpacity
             style={styles.infoButton}
             onPress={() =>
-              navigation.navigate(Paths.DoctorStack, {
+              navigation.navigate(Paths.HealthTrack, {
                 screen: Paths.InforDoctor,
                 params: {
                   doctorId: doctor.id,

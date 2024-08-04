@@ -5,9 +5,9 @@ import {AuthenticationRootStack} from '@lib/types';
 import {NavigationProp} from '@react-navigation/native';
 import React, {FC} from 'react';
 import {useIntl} from 'react-intl';
-import {ScrollView, TouchableOpacity, View} from 'react-native';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import {SafeAreaView, ScrollView, TouchableOpacity, View} from 'react-native';
 import {makeStyles} from './styles';
+import {Paths} from '@constant/navigation';
 
 // email, password, first_name, last_name, dob_year, gender
 
@@ -18,11 +18,10 @@ type Props = {
 export const SignUp: FC<Props> = ({navigation}) => {
   const intl = useIntl();
   const theme = useAppTheme();
-  const inset = useSafeAreaInsets();
-  const styles = makeStyles(theme, inset);
+  const styles = makeStyles(theme);
 
   return (
-    <View style={styles.signUpPage}>
+    <SafeAreaView style={styles.signUpPage}>
       <AuthHeader title="sign_up" />
 
       <ScrollView>
@@ -90,7 +89,7 @@ export const SignUp: FC<Props> = ({navigation}) => {
             <Text style={styles.label}>
               {intl.formatMessage({id: 'aready_account'})}
             </Text>
-            <TouchableOpacity onPress={() => navigation.navigate('SignIn')}>
+            <TouchableOpacity onPress={() => navigation.navigate(Paths.SignIn)}>
               <Text style={styles.signIn}>
                 {intl.formatMessage({id: 'sign_in'})}
               </Text>
@@ -98,6 +97,6 @@ export const SignUp: FC<Props> = ({navigation}) => {
           </View>
         </View>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 };

@@ -35,7 +35,11 @@ const Specialties = () => {
           <FormattedMessage id="specialties" />
         </Text>
         <TouchableOpacity
-          onPress={() => navigation.navigate(Paths.SpecialtiesStack)}>
+          onPress={() =>
+            navigation.navigate(Paths.HealthTrack, {
+              screen: Paths.SpecialtyList,
+            })
+          }>
           <Text style={styles.seeAll}>
             <FormattedMessage id="see_all" />
           </Text>
@@ -47,7 +51,7 @@ const Specialties = () => {
             key={index}
             style={styles.gridItem}
             onPress={() =>
-              navigation.navigate(Paths.SpecialtiesStack, {
+              navigation.navigate(Paths.HealthTrack, {
                 screen: Paths.SpecialtyDetail,
                 params: {
                   specialty: specialty.name,

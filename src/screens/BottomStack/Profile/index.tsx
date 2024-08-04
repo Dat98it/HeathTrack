@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unstable-nested-components */
 import {ProfileExample} from '@assets/index';
 import {GradientView} from '@components/GradientView';
 import {SettingMenu} from '@components/SettingMenu';
@@ -6,8 +7,7 @@ import {Paths} from '@constant/navigation';
 import {useAppNavigation} from '@hooks/navigation';
 import {useAppTheme} from '@hooks/theme';
 import React from 'react';
-import {Image, TouchableOpacity, View} from 'react-native';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import {Image, SafeAreaView, TouchableOpacity, View} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Feather from 'react-native-vector-icons/Feather';
@@ -16,56 +16,63 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import makeStyles from './styles';
 
-const profileData = [
-  {
-    id: '1',
-    Icon: () => <FontAwesome name="user" size={24} color="white" />,
-    label: 'profile',
-    navigateScreen: Paths.EditProfile,
-  },
-  {
-    id: '2',
-    Icon: () => <AntDesign name="hearto" size={24} color="white" />,
-    label: 'favorite',
-    navigateScreen: Paths.DoctorStack,
-    params: {screen: Paths.FavouriteDoctor},
-  },
-  {
-    id: '3',
-    Icon: () => <FontAwesome name="credit-card" size={24} color="white" />,
-    label: 'payment_method',
-  },
-  {
-    id: '4',
-    Icon: () => <SimpleLineIcons name="lock" size={24} color="white" />,
-    label: 'privacy_policy',
-  },
-  {
-    id: '5',
-    Icon: () => <Feather name="settings" size={24} color="white" />,
-    label: 'settings',
-    navigateScreen: Paths.SettingStack,
-  },
-  {
-    id: '6',
-    Icon: () => <Entypo name="help" size={24} color="white" />,
-    label: 'help',
-  },
-  {
-    id: '7',
-    Icon: () => <MaterialIcons name="logout" size={24} color="white" />,
-    label: 'logout',
-  },
-];
-
 export const Profile = () => {
   const navigation = useAppNavigation();
-  const inset = useSafeAreaInsets();
   const theme = useAppTheme();
-  const styles = makeStyles(theme, inset);
+  const styles = makeStyles(theme);
+
+  const profileData = [
+    {
+      id: '1',
+      Icon: () => <FontAwesome name="user" size={24} color="white" />,
+      label: 'profile',
+      onPress: () =>
+        navigation.navigate(Paths.HealthTrack, {
+          screen: Paths.EditProfile,
+        }),
+    },
+    {
+      id: '2',
+      Icon: () => <AntDesign name="hearto" size={24} color="white" />,
+      label: 'favorite',
+      onPress: () =>
+        navigation.navigate(Paths.HealthTrack, {
+          screen: Paths.FavouriteDoctor,
+        }),
+    },
+    {
+      id: '3',
+      Icon: () => <FontAwesome name="credit-card" size={24} color="white" />,
+      label: 'payment_method',
+    },
+    {
+      id: '4',
+      Icon: () => <SimpleLineIcons name="lock" size={24} color="white" />,
+      label: 'privacy_policy',
+    },
+    {
+      id: '5',
+      Icon: () => <Feather name="settings" size={24} color="white" />,
+      label: 'settings',
+      onPress: () =>
+        navigation.navigate(Paths.HealthTrack, {
+          screen: Paths.Settings,
+        }),
+    },
+    {
+      id: '6',
+      Icon: () => <Entypo name="help" size={24} color="white" />,
+      label: 'help',
+    },
+    {
+      id: '7',
+      Icon: () => <MaterialIcons name="logout" size={24} color="white" />,
+      label: 'logout',
+    },
+  ];
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <GradientView>
         <View style={styles.header}>
           <TouchableOpacity
@@ -91,6 +98,6 @@ export const Profile = () => {
       </GradientView>
 
       <SettingMenu data={profileData} />
-    </View>
+    </SafeAreaView>
   );
 };
