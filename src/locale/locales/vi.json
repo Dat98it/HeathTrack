@@ -1,4 +1,12 @@
 {
+  "delete_account": "Xoá tài khoản",
+  "password_manager": "Quản lý mật khẩu",
+  "notification_settings": "Cài đặt thống báo",
+  "logout": "Đăng xuất",
+  "help": "Trợ giúp",
+  "payment_method": "Phương thức thanh toán",
+  "profile": "Trang cá nhân",
+  "settings": "Cài đặt",
   "top_rating": "Xếp hạng cao",
   "sort_by": "Sắp xếp theo",
   "filter": "Lọc",

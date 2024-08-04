@@ -1,4 +1,12 @@
 {
+  "delete_account": "Delete account",
+  "password_manager": "Password manager",
+  "notification_settings": "Notification settings",
+  "logout": "Logout",
+  "help": "Help",
+  "payment_method": "Payment Method",
+  "profile": "Profile",
+  "settings": "Settings",
   "top_rating": "Top Rating",
   "sort_by": "Sort By",
   "filter": "Filter",

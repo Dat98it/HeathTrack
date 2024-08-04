@@ -11,9 +11,10 @@ const makeStyles = (theme: AppTheme) => {
     },
     backButton: {position: 'absolute', left: 15},
     title: {
-      fontSize: 32,
+      fontSize: 27,
       fontWeight: 'bold',
       color: theme.colors.white,
+      marginTop: 4,
     },
   });
 };

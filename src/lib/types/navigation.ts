@@ -44,6 +44,11 @@ export type AppRootStackParams = {
         params?: NotificationParams;
       };
   EditProfile: undefined;
+  SettingStack:
+    | undefined
+    | {
+        screen: Paths.NotificationSetting | Paths.PasswordManager;
+      };
 };
 
 export type AuthenticationRootStack = {

@@ -29,6 +29,11 @@ export enum Paths {
   DetailNotification = 'DetailNotification',
 
   EditProfile = 'EditProfile',
+
+  SettingStack = 'SettingStack',
+  Settings = 'Settings',
+  NotificationSetting = 'NotificationSetting',
+  PasswordManager = 'PasswordManager',
 }
 
 export enum BottomRootStack {

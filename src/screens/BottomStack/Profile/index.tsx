@@ -1,66 +1,62 @@
 import {ProfileExample} from '@assets/index';
 import {GradientView} from '@components/GradientView';
+import {SettingMenu} from '@components/SettingMenu';
 import {Text} from '@components/Text';
+import {Paths} from '@constant/navigation';
 import {useAppNavigation} from '@hooks/navigation';
 import {useAppTheme} from '@hooks/theme';
 import React from 'react';
-import {FlatList, Image, TouchableOpacity, View} from 'react-native';
+import {Image, TouchableOpacity, View} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import Entypo from 'react-native-vector-icons/Entypo';
+import Feather from 'react-native-vector-icons/Feather';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import makeStyles from './styles';
-import {Paths} from '@constant/navigation';
-
-type MenuItem = {
-  id: string;
-  icon: string;
-  label: string;
-  navigateScreen?: string;
-  params?: object;
-};
 
 const profileData = [
-  {id: '1', icon: 'user', label: 'Profile', navigateScreen: Paths.EditProfile},
+  {
+    id: '1',
+    Icon: () => <FontAwesome name="user" size={24} color="white" />,
+    label: 'profile',
+    navigateScreen: Paths.EditProfile,
+  },
   {
     id: '2',
-    icon: 'heart',
-    label: 'Favorite',
+    Icon: () => <AntDesign name="hearto" size={24} color="white" />,
+    label: 'favorite',
     navigateScreen: Paths.DoctorStack,
     params: {screen: Paths.FavouriteDoctor},
   },
-  {id: '3', icon: 'credit-card', label: 'Payment Method'},
-  {id: '4', icon: 'lock', label: 'Privacy Policy'},
-  {id: '5', icon: 'cog', label: 'Settings'},
-  {id: '6', icon: 'question-circle', label: 'Help'},
-  {id: '7', icon: 'sign-out', label: 'Logout'},
+  {
+    id: '3',
+    Icon: () => <FontAwesome name="credit-card" size={24} color="white" />,
+    label: 'payment_method',
+  },
+  {
+    id: '4',
+    Icon: () => <SimpleLineIcons name="lock" size={24} color="white" />,
+    label: 'privacy_policy',
+  },
+  {
+    id: '5',
+    Icon: () => <Feather name="settings" size={24} color="white" />,
+    label: 'settings',
+    navigateScreen: Paths.SettingStack,
+  },
+  {
+    id: '6',
+    Icon: () => <Entypo name="help" size={24} color="white" />,
+    label: 'help',
+  },
+  {
+    id: '7',
+    Icon: () => <MaterialIcons name="logout" size={24} color="white" />,
+    label: 'logout',
+  },
 ];
-
-const Item = ({item}: {item: MenuItem}) => {
-  const navigation = useAppNavigation();
-  const inset = useSafeAreaInsets();
-  const theme = useAppTheme();
-  const styles = makeStyles(theme, inset);
-
-  return (
-    <TouchableOpacity
-      style={styles.item}
-      disabled={!item.navigateScreen}
-      onPress={() =>
-        item.navigateScreen
-          ? navigation.navigate(item.navigateScreen as any, item.params)
-          : undefined
-      }>
-      <View style={styles.itemIcon}>
-        <FontAwesome name={item.icon} size={24} color={theme.colors.white} />
-      </View>
-      <Text style={styles.itemText}>{item.label}</Text>
-      <FontAwesome
-        name="chevron-right"
-        size={20}
-        color={theme.colors.gradient}
-      />
-    </TouchableOpacity>
-  );
-};
 
 export const Profile = () => {
   const navigation = useAppNavigation();
@@ -94,13 +90,7 @@ export const Profile = () => {
         </View>
       </GradientView>
 
-      <FlatList
-        showsVerticalScrollIndicator={false}
-        data={profileData}
-        renderItem={({item}) => <Item item={item} />}
-        keyExtractor={item => item.id}
-        style={styles.list}
-      />
+      <SettingMenu data={profileData} />
     </View>
   );
 };
