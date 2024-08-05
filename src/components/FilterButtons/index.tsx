@@ -1,10 +1,11 @@
 import {GradientView} from '@components/GradientView';
 import {useAppTheme} from '@hooks/theme';
-import React, {FC} from 'react';
+import React, {FC, useState} from 'react';
 import {FormattedMessage} from 'react-intl';
 import {View, Text, TouchableOpacity} from 'react-native';
 import makeStyles from './styles';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import {FilterModal} from '@screens/index';
 
 type Props = {
   title?: string;
@@ -14,6 +15,8 @@ type Props = {
 export const FilterButtons: FC<Props> = ({title, onClickRightButton}) => {
   const theme = useAppTheme();
   const styles = makeStyles(theme);
+
+  const [visible, setVisible] = useState(false);
 
   return (
     <View style={styles.header}>
@@ -27,7 +30,9 @@ export const FilterButtons: FC<Props> = ({title, onClickRightButton}) => {
           <Text style={styles.sortButtonText}>Z</Text>
         </GradientView>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.filterButton}>
+      <TouchableOpacity
+        style={styles.filterButton}
+        onPress={() => setVisible(true)}>
         <Text style={styles.filterButtonText}>
           <FormattedMessage id="filter" />
         </Text>
@@ -40,6 +45,8 @@ export const FilterButtons: FC<Props> = ({title, onClickRightButton}) => {
           </Text>
         </TouchableOpacity>
       )}
+
+      <FilterModal visible={visible} onRequestClose={() => setVisible(false)} />
     </View>
   );
 };

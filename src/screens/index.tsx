@@ -11,3 +11,4 @@ export * from './DetailNotification';
 export * from './Settings';
 export * from './PasswordManager';
 export * from './NotificationSetting';
+export * from './FilterModal';

@@ -48,11 +48,7 @@ const Categories = () => {
           <Text style={styles.sortButtonText}>Z</Text>
         </GradientView>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.filterButton}>
-        <Text style={styles.filterButtonText}>
-          <FormattedMessage id="filter" />
-        </Text>
-      </TouchableOpacity>
+
       <TouchableOpacity
         style={styles.doctors}
         onPress={() =>

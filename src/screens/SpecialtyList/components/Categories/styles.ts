@@ -29,20 +29,7 @@ const makeStyles = (theme: AppTheme) =>
       color: theme.colors.white,
       fontSize: 17,
     },
-    filterButton: {
-      borderColor: theme.colors.gradient,
-      borderWidth: 1,
-      borderRadius: 20,
-      marginRight: 8,
-      height: 35,
-      justifyContent: 'center',
-      alignItems: 'center',
-      width: 70,
-    },
-    filterButtonText: {
-      color: theme.colors.gradient,
-      fontSize: 17,
-    },
+
     doctors: {
       marginLeft: 'auto',
       flexDirection: 'row',
