@@ -34,6 +34,8 @@ export enum Paths {
   PasswordManager = 'PasswordManager',
 
   InforMessage = 'InforMessage',
+
+  PrivacyPolicy = 'PrivacyPolicy',
 }
 
 export enum BottomRootStack {

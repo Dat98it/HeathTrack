@@ -52,6 +52,10 @@ export const Profile = () => {
       id: '4',
       Icon: () => <SimpleLineIcons name="lock" size={24} color="white" />,
       label: 'privacy_policy',
+      onPress: () =>
+        navigation.navigate(Paths.HealthTrack, {
+          screen: Paths.PrivacyPolicy,
+        }),
     },
     {
       id: '5',

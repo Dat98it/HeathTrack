@@ -12,6 +12,7 @@ import {
   ListNotification,
   NotificationSetting,
   PasswordManager,
+  PrivacyPolicy,
   RatingDoctor,
   Settings,
   SpecialtyDetail,
@@ -92,6 +93,11 @@ export const HealthTrackStackScreen = () => {
       <HealthTrackStack.Screen
         name={Paths.InforMessage}
         component={InforMessage}
+      />
+
+      <HealthTrackStack.Screen
+        name={Paths.PrivacyPolicy}
+        component={PrivacyPolicy}
       />
     </HealthTrackStack.Navigator>
   );
