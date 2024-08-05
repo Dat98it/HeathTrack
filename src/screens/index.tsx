@@ -12,3 +12,4 @@ export * from './Settings';
 export * from './PasswordManager';
 export * from './NotificationSetting';
 export * from './FilterModal';
+export * from './InforMessage';

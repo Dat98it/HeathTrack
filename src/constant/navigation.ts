@@ -32,6 +32,8 @@ export enum Paths {
   Settings = 'Settings',
   NotificationSetting = 'NotificationSetting',
   PasswordManager = 'PasswordManager',
+
+  InforMessage = 'InforMessage',
 }
 
 export enum BottomRootStack {

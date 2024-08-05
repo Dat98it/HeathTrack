@@ -7,6 +7,7 @@ import {
   EditProfile,
   FavouriteDoctor,
   InforDoctor,
+  InforMessage,
   ListDoctor,
   ListNotification,
   NotificationSetting,
@@ -86,6 +87,11 @@ export const HealthTrackStackScreen = () => {
       <HealthTrackStack.Screen
         name={Paths.EditProfile}
         component={EditProfile}
+      />
+
+      <HealthTrackStack.Screen
+        name={Paths.InforMessage}
+        component={InforMessage}
       />
     </HealthTrackStack.Navigator>
   );
