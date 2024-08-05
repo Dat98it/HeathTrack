@@ -4,7 +4,6 @@ import {StyleSheet} from 'react-native';
 const makeStyles = (theme: AppTheme) =>
   StyleSheet.create({
     container: {
-      backgroundColor: theme.colors.gradient,
       padding: 20,
       paddingTop: 40,
     },

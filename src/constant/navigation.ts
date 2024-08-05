@@ -36,6 +36,8 @@ export enum Paths {
   InforMessage = 'InforMessage',
 
   PrivacyPolicy = 'PrivacyPolicy',
+
+  HelpCenter = 'HelpCenter',
 }
 
 export enum BottomRootStack {

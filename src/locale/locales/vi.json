@@ -1,4 +1,11 @@
 {
+  "services": "Dịch vụ",
+  "general": "Tổng quan",
+  "popular_topic": "Phổ biến",
+  "contact_us": "Liên hệ",
+  "faq": "FAQ",
+  "how_can_we_help": "Bạn cần giúp đỡ?",
+  "help_center": "Trung tâm trợ giúp",
   "messages": "Tin nhắn",
   "delete_account": "Xoá tài khoản",
   "password_manager": "Quản lý mật khẩu",

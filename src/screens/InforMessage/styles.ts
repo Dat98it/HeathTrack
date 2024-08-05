@@ -13,7 +13,7 @@ const makeStyles = (theme: AppTheme) =>
       justifyContent: 'space-between',
       backgroundColor: theme.colors.gradient,
       paddingVertical: 23,
-      paddingHorizontal: 24,
+      paddingHorizontal: 16,
     },
     headerText: {
       color: '#fff',

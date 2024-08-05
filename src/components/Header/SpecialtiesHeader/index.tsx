@@ -7,16 +7,17 @@ import makeStyles from './styles';
 import {useNavigation} from '@react-navigation/native';
 import {Text} from '@components/Text';
 import {FormattedMessage} from 'react-intl';
+import {GradientView} from '@components/GradientView';
 
-type Props = {title?: string; onPress?: () => void};
+type Props = {title?: string; subTitle?: string; onPress?: () => void};
 
-export const SpecialtiesHeader = ({title, onPress}: Props) => {
+export const SpecialtiesHeader = ({title, onPress, subTitle}: Props) => {
   const navigation = useNavigation();
   const theme = useAppTheme();
   const styles = makeStyles(theme);
 
   return (
-    <View style={styles.container}>
+    <GradientView style={styles.container}>
       <TouchableOpacity
         style={styles.backButton}
         onPress={onPress ?? navigation.goBack}>
@@ -26,7 +27,7 @@ export const SpecialtiesHeader = ({title, onPress}: Props) => {
         <FormattedMessage id={title ?? 'specialties'} />
       </Text>
       <Text style={styles.subtitle}>
-        <FormattedMessage id="find_your_doctor" />
+        <FormattedMessage id={subTitle ?? 'find_your_doctor'} />
       </Text>
       <View style={styles.searchContainer}>
         <View style={styles.searchIcon}>
@@ -38,6 +39,6 @@ export const SpecialtiesHeader = ({title, onPress}: Props) => {
           placeholderTextColor={theme.colors.gradient}
         />
       </View>
-    </View>
+    </GradientView>
   );
 };

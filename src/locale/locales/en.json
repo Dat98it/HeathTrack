@@ -1,4 +1,11 @@
 {
+  "services": "Services",
+  "general": "General",
+  "popular_topic": "Popular Topic",
+  "contact_us": "Contact Us",
+  "faq": "FAQ",
+  "how_can_we_help": "How can we help?",
+  "help_center": "Help center",
   "messages": "Messages",
   "delete_account": "Delete account",
   "password_manager": "Password manager",

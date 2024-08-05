@@ -1,6 +1,7 @@
 import {Paths} from '@constant/index';
 import {BottomStackScreen} from '@navigation/HealthTrack/BottomStackScreen';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {HelpCenter} from '@screens/HelpCenter';
 import {
   DetailNotification,
   DoctorByGender,
@@ -99,6 +100,8 @@ export const HealthTrackStackScreen = () => {
         name={Paths.PrivacyPolicy}
         component={PrivacyPolicy}
       />
+
+      <HealthTrackStack.Screen name={Paths.HelpCenter} component={HelpCenter} />
     </HealthTrackStack.Navigator>
   );
 };

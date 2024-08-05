@@ -70,6 +70,10 @@ export const Profile = () => {
       id: '6',
       Icon: () => <Entypo name="help" size={24} color="white" />,
       label: 'help',
+      onPress: () =>
+        navigation.navigate(Paths.HealthTrack, {
+          screen: Paths.HelpCenter,
+        }),
     },
     {
       id: '7',

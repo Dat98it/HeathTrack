@@ -71,12 +71,6 @@ export const InforMessage = () => {
   const theme = useAppTheme();
   const styles = makeStyles(theme);
 
-  // useLayoutEffect(() => {
-  //   if (flatlistRef.current) {
-  //     flatlistRef.current?.scrollToEnd({animated: true});
-  //   }
-  // }, []);
-
   return (
     <SafeAreaView style={styles.container}>
       <Header title={params.username} />

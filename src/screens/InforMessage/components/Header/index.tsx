@@ -18,7 +18,7 @@ export const Header = ({title}: {title: string}) => {
       <TouchableOpacity onPress={navigation.goBack}>
         <MaterialIcons
           name="keyboard-arrow-left"
-          size={37}
+          size={35}
           color={theme.colors.white}
         />
       </TouchableOpacity>

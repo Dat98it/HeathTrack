@@ -13,6 +13,10 @@ const makeStyles = (theme: AppTheme, position?: 'bottom' | 'center') =>
       backgroundColor: theme.colors.white,
       padding: 20,
       width: position === 'bottom' ? '100%' : '90%',
+      ...(position === 'bottom' && {
+        borderTopLeftRadius: 25,
+        borderTopRightRadius: 25,
+      }),
       maxHeight: '80%',
       shadowColor: theme.colors.black,
       shadowOffset: {
@@ -22,7 +26,7 @@ const makeStyles = (theme: AppTheme, position?: 'bottom' | 'center') =>
       shadowOpacity: 0.25,
       shadowRadius: 4,
       elevation: 5,
-      minHeight: 242,
+      minHeight: 200,
     },
     content: {
       flex: 1,
