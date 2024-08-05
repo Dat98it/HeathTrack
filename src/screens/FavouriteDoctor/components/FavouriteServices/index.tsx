@@ -69,23 +69,23 @@ const FavouriteServices = () => {
         {services.map((service, index) => {
           return (
             <View key={index} style={styles.serviceContainer}>
-              <TouchableOpacity onPress={() => toggleExpand(service.name)}>
-                <GradientView style={styles.serviceHeader}>
-                  <Icon name="heart" size={20} color={theme.colors.white} />
-                  <Text style={styles.serviceName}>
-                    <FormattedMessage id={service.name} />
-                  </Text>
-                  <Icon
-                    name={
-                      expandedService === service.name
-                        ? 'chevron-up'
-                        : 'chevron-down'
-                    }
-                    size={20}
-                    color={theme.colors.white}
-                  />
-                </GradientView>
-              </TouchableOpacity>
+              <GradientView
+                style={styles.serviceHeader}
+                onPress={() => toggleExpand(service.name)}>
+                <Icon name="heart" size={20} color={theme.colors.white} />
+                <Text style={styles.serviceName}>
+                  <FormattedMessage id={service.name} />
+                </Text>
+                <Icon
+                  name={
+                    expandedService === service.name
+                      ? 'chevron-up'
+                      : 'chevron-down'
+                  }
+                  size={20}
+                  color={theme.colors.white}
+                />
+              </GradientView>
 
               {expandedService === service.name && (
                 <View>

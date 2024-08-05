@@ -54,6 +54,41 @@ const makeStyles = (theme: AppTheme) =>
       fontSize: 14,
       marginTop: 4,
     },
+    modalContent: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      gap: 20,
+    },
+    title: {
+      fontSize: 18,
+    },
+    buttons: {flexDirection: 'row', justifyContent: 'center', gap: 10},
+    submitButton: {
+      width: '40%',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: 50,
+      borderRadius: 100,
+    },
+    submitButtonText: {
+      fontSize: 20,
+      fontWeight: 'bold',
+      color: theme.colors.white,
+    },
+    cancelButton: {
+      width: '40%',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: 50,
+      borderWidth: 1,
+      borderRadius: 100,
+      borderColor: theme.colors.gradient,
+    },
+    cancelButtonText: {
+      fontSize: 20,
+      fontWeight: 'bold',
+    },
   });
 
 export default makeStyles;

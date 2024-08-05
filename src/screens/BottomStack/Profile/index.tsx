@@ -15,11 +15,14 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import makeStyles from './styles';
+import {Modal} from '@components/index';
 
 export const Profile = () => {
   const navigation = useAppNavigation();
   const theme = useAppTheme();
   const styles = makeStyles(theme);
+
+  const [visible, setVisible] = React.useState(false);
 
   const profileData = [
     {
@@ -68,6 +71,7 @@ export const Profile = () => {
       id: '7',
       Icon: () => <MaterialIcons name="logout" size={24} color="white" />,
       label: 'logout',
+      onPress: () => setVisible(true),
     },
   ];
 
@@ -98,6 +102,29 @@ export const Profile = () => {
       </GradientView>
 
       <SettingMenu data={profileData} />
+
+      <Modal
+        position="bottom"
+        visible={visible}
+        onClose={() => setVisible(false)}>
+        <View style={styles.modalContent}>
+          <Text style={styles.title}>Are you sure you want to log out?</Text>
+
+          <View style={styles.buttons}>
+            <TouchableOpacity
+              style={styles.cancelButton}
+              onPress={() => setVisible(false)}>
+              <Text style={styles.cancelButtonText}>Cancel</Text>
+            </TouchableOpacity>
+
+            <GradientView
+              style={styles.submitButton}
+              onPress={() => setVisible(false)}>
+              <Text style={styles.submitButtonText}>Yes, Logout</Text>
+            </GradientView>
+          </View>
+        </View>
+      </Modal>
     </SafeAreaView>
   );
 };

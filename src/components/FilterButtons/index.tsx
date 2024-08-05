@@ -23,13 +23,11 @@ export const FilterButtons: FC<Props> = ({title, onClickRightButton}) => {
       <Text style={styles.sortBy}>
         <FormattedMessage id="sort_by" />
       </Text>
-      <TouchableOpacity>
-        <GradientView style={styles.sortButton}>
-          <Text style={styles.sortButtonText}>A</Text>
-          <FontAwesome name="long-arrow-right" color={theme.colors.white} />
-          <Text style={styles.sortButtonText}>Z</Text>
-        </GradientView>
-      </TouchableOpacity>
+      <GradientView style={styles.sortButton}>
+        <Text style={styles.sortButtonText}>A</Text>
+        <FontAwesome name="long-arrow-right" color={theme.colors.white} />
+        <Text style={styles.sortButtonText}>Z</Text>
+      </GradientView>
       <TouchableOpacity
         style={styles.filterButton}
         onPress={() => setVisible(true)}>

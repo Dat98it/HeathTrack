@@ -12,11 +12,9 @@ export const SearchNotification = () => {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity>
-        <GradientView style={styles.button}>
-          <Text style={styles.buttonText}>Today</Text>
-        </GradientView>
-      </TouchableOpacity>
+      <GradientView style={styles.button}>
+        <Text style={styles.buttonText}>Today</Text>
+      </GradientView>
 
       <View style={styles.searchContainer}>
         <SearchIcon />

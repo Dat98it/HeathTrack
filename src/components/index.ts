@@ -11,3 +11,4 @@ export * from './Header/SpecialtiesHeader';
 export * from './ListDoctor';
 export * from './FilterButtons';
 export * from './SettingMenu';
+export * from './Modal';

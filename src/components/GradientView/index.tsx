@@ -3,7 +3,9 @@ import React from 'react';
 import {StyleSheet, ViewProps} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-export const GradientView = ({style, children, ...props}: ViewProps) => {
+type Props = ViewProps & {onPress?: () => void};
+
+export const GradientView = ({style, children, ...props}: Props) => {
   const theme = useAppTheme();
   const styles = StyleSheet.create({
     linearGradient: {
@@ -13,6 +15,7 @@ export const GradientView = ({style, children, ...props}: ViewProps) => {
 
   return (
     <LinearGradient
+      onTouchStart={props.onPress}
       colors={[theme.colors.startGradient, theme.colors.endGradient]}
       style={[styles.linearGradient, style]}
       {...props}>
