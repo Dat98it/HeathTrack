@@ -17,6 +17,7 @@ import {
   PasswordManager,
   PrivacyPolicy,
   RatingDoctor,
+  ReviewAppointment,
   Settings,
   SpecialtyDetail,
   SpecialtyList,
@@ -111,6 +112,11 @@ export const HealthTrackStackScreen = () => {
       <HealthTrackStack.Screen
         name={Paths.CancelAppointment}
         component={CancelAppointment}
+      />
+
+      <HealthTrackStack.Screen
+        name={Paths.ReviewAppointment}
+        component={ReviewAppointment}
       />
 
       <HealthTrackStack.Screen name={Paths.HelpCenter} component={HelpCenter} />

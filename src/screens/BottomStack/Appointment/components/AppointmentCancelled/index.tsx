@@ -4,6 +4,8 @@ import React from 'react';
 import {Image, ScrollView, TouchableOpacity, View} from 'react-native';
 import makeStyles from './styles';
 import {FormattedMessage} from 'react-intl';
+import {Paths} from '@constant/index';
+import {useAppNavigation} from '@hooks/navigation';
 
 const appointments = Array.from({length: 20}, (_, index) => ({
   id: index,
@@ -25,6 +27,7 @@ const appointments = Array.from({length: 20}, (_, index) => ({
 }));
 
 export const AppointmentCancelled: React.FC = () => {
+  const navigation = useAppNavigation();
   const theme = useAppTheme();
   const styles = makeStyles(theme);
 
@@ -41,7 +44,16 @@ export const AppointmentCancelled: React.FC = () => {
             </View>
           </View>
 
-          <TouchableOpacity style={styles.detailButton}>
+          <TouchableOpacity
+            style={styles.detailButton}
+            onPress={() =>
+              navigation.navigate(Paths.HealthTrack, {
+                screen: Paths.ReviewAppointment,
+                params: {
+                  appointmentId: item.id,
+                },
+              })
+            }>
             <Text style={styles.detailButtonLabel}>
               <FormattedMessage id="add_review" />
             </Text>

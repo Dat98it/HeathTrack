@@ -6,6 +6,8 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import makeStyles from './styles';
 import {FormattedMessage} from 'react-intl';
 import {Text} from '@components/Text';
+import {useAppNavigation} from '@hooks/navigation';
+import {Paths} from '@constant/navigation';
 
 const appointments = Array.from({length: 20}, (_, index) => ({
   id: index,
@@ -25,6 +27,7 @@ const appointments = Array.from({length: 20}, (_, index) => ({
 }));
 
 const Appointment = ({data}: {data: AppointmentItem}) => {
+  const navigation = useAppNavigation();
   const theme = useAppTheme();
   const styles = makeStyles(theme);
 
@@ -63,7 +66,16 @@ const Appointment = ({data}: {data: AppointmentItem}) => {
           </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() =>
+            navigation.navigate(Paths.HealthTrack, {
+              screen: Paths.ReviewAppointment,
+              params: {
+                appointmentId: data.id,
+              },
+            })
+          }>
           <Text style={styles.buttonText}>
             <FormattedMessage id="add_review" />
           </Text>

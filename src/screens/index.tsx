@@ -16,3 +16,4 @@ export * from './InforMessage';
 export * from './PrivacyPolicy';
 export * from './AppointmentDetail';
 export * from './CancelAppointment';
+export * from './ReviewAppointment';

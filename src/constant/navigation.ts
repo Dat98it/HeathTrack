@@ -42,6 +42,8 @@ export enum Paths {
   AppointmentDetail = 'AppointmentDetail',
 
   CancelAppointment = 'CancelAppointment',
+
+  ReviewAppointment = 'ReviewAppointment',
 }
 
 export enum BottomRootStack {
