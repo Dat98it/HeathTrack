@@ -14,3 +14,4 @@ export * from './NotificationSetting';
 export * from './FilterModal';
 export * from './InforMessage';
 export * from './PrivacyPolicy';
+export * from './AppointmentDetail';

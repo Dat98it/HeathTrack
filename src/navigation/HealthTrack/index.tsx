@@ -3,6 +3,7 @@ import {BottomStackScreen} from '@navigation/HealthTrack/BottomStackScreen';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {HelpCenter} from '@screens/HelpCenter';
 import {
+  AppointmentDetail,
   DetailNotification,
   DoctorByGender,
   EditProfile,
@@ -99,6 +100,11 @@ export const HealthTrackStackScreen = () => {
       <HealthTrackStack.Screen
         name={Paths.PrivacyPolicy}
         component={PrivacyPolicy}
+      />
+
+      <HealthTrackStack.Screen
+        name={Paths.AppointmentDetail}
+        component={AppointmentDetail}
       />
 
       <HealthTrackStack.Screen name={Paths.HelpCenter} component={HelpCenter} />

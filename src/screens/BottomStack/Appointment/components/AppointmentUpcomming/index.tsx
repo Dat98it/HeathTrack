@@ -6,6 +6,8 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import makeStyles from './styles';
 import {FormattedMessage} from 'react-intl';
+import {useAppNavigation} from '@hooks/navigation';
+import {Paths} from '@constant/navigation';
 
 const appointments = Array.from({length: 20}, (_, index) => ({
   id: index,
@@ -27,6 +29,7 @@ const appointments = Array.from({length: 20}, (_, index) => ({
 }));
 
 export const AppointmentUpcomming: React.FC = () => {
+  const navigation = useAppNavigation();
   const theme = useAppTheme();
   const styles = makeStyles(theme);
 
@@ -54,7 +57,13 @@ export const AppointmentUpcomming: React.FC = () => {
           </View>
 
           <View style={styles.buttonContainer}>
-            <TouchableOpacity style={styles.detailButton}>
+            <TouchableOpacity
+              style={styles.detailButton}
+              onPress={() =>
+                navigation.navigate(Paths.HealthTrack, {
+                  screen: Paths.AppointmentDetail,
+                })
+              }>
               <Text style={styles.detailButtonLabel}>
                 <FormattedMessage id="details" />
               </Text>

@@ -38,6 +38,8 @@ export enum Paths {
   PrivacyPolicy = 'PrivacyPolicy',
 
   HelpCenter = 'HelpCenter',
+
+  AppointmentDetail = 'AppointmentDetail',
 }
 
 export enum BottomRootStack {
