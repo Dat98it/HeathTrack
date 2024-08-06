@@ -1,4 +1,9 @@
 {
+  "others": "Others",
+  "unexpected_work": "Unexpected Work",
+  "weather_conditions": "Weather Conditions",
+  "rescheduling": "Rescheduling",
+  "cancel_appointment": "Cancel Appointment",
   "details": "Details",
   "add_review": "Add Review",
   "rebook": "Re-Book",

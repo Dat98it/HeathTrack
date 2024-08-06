@@ -62,6 +62,7 @@ export const AppointmentUpcomming: React.FC = () => {
               onPress={() =>
                 navigation.navigate(Paths.HealthTrack, {
                   screen: Paths.AppointmentDetail,
+                  params: {appointmentId: item.id},
                 })
               }>
               <Text style={styles.detailButtonLabel}>
@@ -74,7 +75,14 @@ export const AppointmentUpcomming: React.FC = () => {
                 <Entypo name="check" size={20} color={theme.colors.gradient} />
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.iconButton}>
+              <TouchableOpacity
+                style={styles.iconButton}
+                onPress={() =>
+                  navigation.navigate(Paths.HealthTrack, {
+                    screen: Paths.CancelAppointment,
+                    params: {appointmentId: item.id},
+                  })
+                }>
                 <FontAwesome
                   name="close"
                   size={20}

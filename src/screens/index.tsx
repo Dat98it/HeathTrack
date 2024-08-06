@@ -15,3 +15,4 @@ export * from './FilterModal';
 export * from './InforMessage';
 export * from './PrivacyPolicy';
 export * from './AppointmentDetail';
+export * from './CancelAppointment';

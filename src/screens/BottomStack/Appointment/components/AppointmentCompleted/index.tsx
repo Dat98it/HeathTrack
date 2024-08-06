@@ -39,16 +39,16 @@ const Appointment = ({data}: {data: AppointmentItem}) => {
           <Text style={styles.specialty}>{data.specialty}</Text>
 
           <View style={styles.icons}>
-            <Text style={styles.iconLabel}>
-              <TouchableOpacity>
+            <TouchableOpacity>
+              <Text style={styles.iconLabel}>
                 <AntDesign
                   size={20}
                   color={theme.colors.gradient}
                   name="star"
                 />
-              </TouchableOpacity>
-              {data.rating}
-            </Text>
+                {data.rating}
+              </Text>
+            </TouchableOpacity>
 
             <TouchableOpacity>
               <AntDesign size={20} color={theme.colors.gradient} name="heart" />

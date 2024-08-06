@@ -15,6 +15,7 @@ const makeStyles = (theme: AppTheme) =>
     filterButton: {
       paddingVertical: 8,
       paddingHorizontal: 15,
+      alignSelf: 'center',
       borderWidth: 1,
       borderColor: theme.colors.gradient,
       borderRadius: 20,
@@ -23,6 +24,7 @@ const makeStyles = (theme: AppTheme) =>
     filterButtonActive: {
       paddingVertical: 8,
       paddingHorizontal: 15,
+      alignSelf: 'center',
       backgroundColor: theme.colors.gradient,
       borderRadius: 20,
       marginHorizontal: 3,
