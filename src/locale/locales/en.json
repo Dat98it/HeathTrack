@@ -1,4 +1,11 @@
 {
+  "details": "Details",
+  "add_review": "Add Review",
+  "rebook": "Re-Book",
+  "cancelled": "Cancelled",
+  "upcoming": "Upcoming",
+  "completed": "Completed",
+  "all_appointments": "All Appointment",
   "services": "Services",
   "general": "General",
   "popular_topic": "Popular Topic",

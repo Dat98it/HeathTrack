@@ -12,7 +12,7 @@ export enum Paths {
   AppStack = 'AppStack',
   Home = 'Home',
   Chat = 'Chat',
-  Schedule = 'Schedule',
+  Appointment = 'Appointment',
   Profile = 'Profile',
 
   SpecialtyList = 'SpecialtyList',
@@ -43,7 +43,7 @@ export enum Paths {
 export enum BottomRootStack {
   Home = 'Home',
   Chat = 'Chat',
-  Schedule = 'Schedule',
+  Appointment = 'Appointment',
   Profile = 'Profile',
 }
 

@@ -1,4 +1,11 @@
 {
+  "details": "Chi tiết",
+  "add_review": "Thêm nhận xét",
+  "rebook": "Đặt lại",
+  "cancelled": "Đã hủy",
+  "upcoming": "Sắp tới",
+  "completed": "Hoàn thành",
+  "all_appointments": "Tất cả cuộc hẹn",
   "services": "Dịch vụ",
   "general": "Tổng quan",
   "popular_topic": "Phổ biến",

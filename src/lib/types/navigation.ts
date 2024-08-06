@@ -34,6 +34,6 @@ export type AuthenticationRootStack = {
 export type BottomRootStack = {
   Home: undefined;
   Chat: undefined;
-  Schedule: undefined;
+  Appointment: undefined;
   Profile: undefined;
 };

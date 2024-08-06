@@ -23,7 +23,7 @@ const iconMap: Record<
 > = {
   [BottomRootStack.Home]: HomeIcon,
   [BottomRootStack.Chat]: MessageIcon,
-  [BottomRootStack.Schedule]: BookingIcon,
+  [BottomRootStack.Appointment]: BookingIcon,
   [BottomRootStack.Profile]: UserProfileIcon,
 };
 

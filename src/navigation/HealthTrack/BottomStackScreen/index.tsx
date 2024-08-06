@@ -6,7 +6,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {TabBarIcon} from '@components/index';
 import {Paths} from '@constant/navigation';
 import {BottomRootStack} from '@lib/types';
-import {Calendar, Chat, Home, Profile} from '@screens/BottomStack';
+import {Appointment, Chat, Home, Profile} from '@screens/BottomStack';
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import {EdgeInsets, useSafeAreaInsets} from 'react-native-safe-area-context';
@@ -30,7 +30,7 @@ export const BottomStackScreen = () => {
 
       <Tab.Screen name={Paths.Chat}>{() => <Chat />}</Tab.Screen>
 
-      <Tab.Screen name={Paths.Schedule}>{() => <Calendar />}</Tab.Screen>
+      <Tab.Screen name={Paths.Appointment}>{() => <Appointment />}</Tab.Screen>
 
       <Tab.Screen name={Paths.Profile}>{() => <Profile />}</Tab.Screen>
     </Tab.Navigator>
