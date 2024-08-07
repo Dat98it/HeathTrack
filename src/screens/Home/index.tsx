@@ -1,10 +1,10 @@
-import Login from '@screens/Login';
+import Step1 from '@screens/steps/Step1';
 import React from 'react';
 
 const HomeScreen = () => {
   return (
     <>
-      <Login />
+      <Step1 />
     </>
   );
 };

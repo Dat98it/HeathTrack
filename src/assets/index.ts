@@ -10,7 +10,7 @@ export {default as EllipseIcon} from './icons/EllipseIcon';
 export {default as FacebookIcon} from './icons/FacebookIcon';
 export {default as GoogleIcon} from './icons/GoogleIcon';
 export {default as Fingerprint} from './icons/Fingerprint';
-export {default as Step1} from './icons/Step1.svg';
-export {default as Step2} from './icons/Step2.svg';
+export {default as Step1Icon} from './icons/Step1Icon.svg';
+export {default as Step2Icon} from './icons/Step2Icon.svg';
 
 //image
