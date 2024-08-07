@@ -8,12 +8,14 @@ type ViewProps = ViewStyle & {
   children?: ReactNode;
   allowInset?: boolean;
   backgroundColor?: keyof (typeof DefaultTheme)['colors'];
+  borderColor?: keyof (typeof DefaultTheme)['colors'];
 };
 
 export const View: React.FC<ViewProps> = ({
   children,
   allowInset,
   backgroundColor,
+  borderColor,
   ...props
 }) => {
   const insset = useSafeAreaInsets();
@@ -26,6 +28,9 @@ export const View: React.FC<ViewProps> = ({
           backgroundColor: theme.colors[
             backgroundColor
           ] as ViewStyle['backgroundColor'],
+        }),
+        ...(borderColor && {
+          borderColor: theme.colors[borderColor] as ViewStyle['borderColor'],
         }),
         ...(allowInset && {
           paddingTop: insset.top,

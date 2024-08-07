@@ -3,17 +3,29 @@ import {View} from '@components/View';
 import {useAppTheme} from '@hooks/theme';
 import {DefaultTheme} from '@lib/theme';
 import React, {useState} from 'react';
-import {TextInput, TouchableOpacity, ViewStyle} from 'react-native';
+import {
+  KeyboardType,
+  TextInput,
+  TextStyle,
+  TouchableOpacity,
+  ViewStyle,
+} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-type Props = ViewStyle & {
-  backgroundColor?: keyof (typeof DefaultTheme)['colors'];
-  placeholderTextColor?: keyof (typeof DefaultTheme)['colors'];
-  placeholder?: string;
-  value?: string;
-  secureTextEntry?: boolean;
-  editable?: boolean;
-};
+type Props = ViewStyle &
+  TextStyle & {
+    backgroundColor?: keyof (typeof DefaultTheme)['colors'];
+    placeholderTextColor?: keyof (typeof DefaultTheme)['colors'];
+    color?: keyof (typeof DefaultTheme)['colors'];
+    placeholder?: string;
+    value?: string;
+    secureTextEntry?: boolean;
+    editable?: boolean;
+    initialPadding?: boolean;
+    maxLength?: number;
+    keyboardType?: KeyboardType;
+    onChangeText?: (text: string) => void;
+  };
 
 export const Input: React.FC<Props> = ({
   backgroundColor,
@@ -22,8 +34,14 @@ export const Input: React.FC<Props> = ({
   placeholder,
   secureTextEntry,
   editable,
+  initialPadding = true,
+  maxLength,
+  color,
+  keyboardType,
+  onChangeText,
   ...props
 }) => {
+  console.log('keyboardType', keyboardType);
   const theme = useAppTheme();
 
   const [isSecureTextEntry, setIsSecureTextEntry] = useState(secureTextEntry);
@@ -31,21 +49,27 @@ export const Input: React.FC<Props> = ({
   return (
     <View>
       <TextInput
+        keyboardType={keyboardType}
         value={value}
+        maxLength={maxLength}
         secureTextEntry={!secureTextEntry ? false : isSecureTextEntry}
         editable={editable}
         placeholder={placeholder}
         placeholderTextColor={placeholderTextColor}
+        onChangeText={onChangeText}
         style={{
           width: '100%',
           minHeight: 50,
           borderRadius: 20,
-          paddingHorizontal: 24,
+          ...(initialPadding && {paddingHorizontal: 24}),
           fontSize: 16,
           ...(backgroundColor && {
             backgroundColor: theme.colors[
               backgroundColor
             ] as ViewStyle['backgroundColor'],
+          }),
+          ...(color && {
+            color: theme.colors[color] as TextStyle['color'],
           }),
           ...(secureTextEntry && {paddingRight: 40}),
           ...props,
