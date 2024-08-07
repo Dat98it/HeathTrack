@@ -14,6 +14,7 @@ export const DefaultTheme = {
     oceanBlue: '#0068FF',
     white: '#FFFFFF',
     lightWhite: '#E9F6FE',
+    gray: '#4B4544',
     elevation: {
       level0: 'transparent',
       level1: 'rgb(247, 243, 249)', // palette.primary40, alpha 0.05
