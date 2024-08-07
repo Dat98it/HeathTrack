@@ -13,5 +13,6 @@ export {default as Fingerprint} from './icons/Fingerprint';
 export {default as Step1Icon} from './icons/Step1Icon.svg';
 export {default as Step2Icon} from './icons/Step2Icon.svg';
 export {default as AppLogo} from './icons/app-logo.svg';
+export {default as CheckProcessIcon} from './icons/check-process.svg';
 
 //image
