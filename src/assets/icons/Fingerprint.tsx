@@ -1,17 +1,21 @@
 import {useAppTheme} from '@hooks/theme';
+import {DefaultTheme} from '@lib/theme';
 import React, {FC} from 'react';
-import {Path, Svg} from 'react-native-svg';
+import {Path, StrokeProps, Svg} from 'react-native-svg';
 
-type Props = {color?: string; size?: number};
+type Props = {
+  color?: keyof (typeof DefaultTheme)['colors'];
+  size?: number;
+};
 
-const Fingerprint: FC<Props> = ({color, size = 50}) => {
+const Fingerprint: FC<Props> = ({color = 'cyprus', size = 50}) => {
   const theme = useAppTheme();
 
   return (
     <Svg width={size} height={size} viewBox="0 0 111 116" fill="none">
       <Path
         d="M44.5902 55.35C47.3612 64.55 64.8739 91.2298 86.1552 96.7498M77.8422 107.1C61.2162 101.925 44.4076 89.1971 34.6147 67.4249C22.9764 41.5502 49.578 31.1998 59.5537 53.6249C63.3904 62.2499 69.5293 71.7374 87.8179 81.2249C106.106 90.7124 117.745 62.2502 101.119 53.6253C76.9106 41.067 71.1919 4.98003 36.2773 12.2252C-12.7677 22.4026 -1.96243 89.85 22.9765 108.825M96.1309 67.4249C66.2041 57.0749 66.9283 14.0342 34.6147 27.7495C-1.96254 43.2745 24.6393 105.375 57.8913 114M62.8789 1.875C81.1675 3.6 86.1553 22.575 106.107 39.825"
-        stroke={color ?? theme.colors.cyprus}
+        stroke={theme.colors[color] as StrokeProps['stroke']}
         strokeWidth="3"
         strokeLinecap="round"
         strokeLinejoin="round"
