@@ -5,3 +5,5 @@ export * from './TouchableOpacity';
 export * from './Percentage';
 export * from './HighChart';
 export * from './AppHeader';
+export * from './Calendar';
+export * from './EventItem';
