@@ -37,11 +37,7 @@ const SecurityFingerprint: FC = () => {
         </View>
 
         <View alignSelf="center" gap={27} marginTop={52}>
-          <Text
-            textAlign="center"
-            fontSize={20}
-            fontWeight={'bold'}
-            color="void">
+          <Text textAlign="center" fontSize={20} fontWeight={'bold'}>
             Use fingerprint to access
           </Text>
           <Text textAlign="center">
@@ -58,7 +54,7 @@ const SecurityFingerprint: FC = () => {
             alignItems="center"
             backgroundColor="lightGreen"
             borderRadius={30}>
-            <Text fontSize={20} fontWeight={'bold'} color="void">
+            <Text fontSize={20} fontWeight={'bold'}>
               Use Touch id
             </Text>
           </TouchableOpacity>

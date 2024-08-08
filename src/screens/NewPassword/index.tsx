@@ -56,7 +56,7 @@ const NewPassword: React.FC = () => {
           alignItems="center"
           backgroundColor="caribbeanGreen"
           borderRadius={30}>
-          <Text fontSize={20} fontWeight={'bold'} color="void">
+          <Text fontSize={20} fontWeight={'bold'}>
             Sign Up
           </Text>
         </TouchableOpacity>

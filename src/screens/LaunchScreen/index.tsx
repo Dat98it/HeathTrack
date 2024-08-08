@@ -27,7 +27,7 @@ const LaunchScreen = () => {
           justifyContent="center"
           alignItems="center"
           borderRadius={30}>
-          <Text color="void" fontWeight="bold" fontSize={20}>
+          <Text fontWeight="bold" fontSize={20}>
             Log In
           </Text>
         </TouchableOpacity>
@@ -39,13 +39,13 @@ const LaunchScreen = () => {
           justifyContent="center"
           alignItems="center"
           borderRadius={30}>
-          <Text color="void" fontWeight="bold" fontSize={20}>
+          <Text fontWeight="bold" fontSize={20}>
             Sign Up
           </Text>
         </TouchableOpacity>
 
         <TouchableOpacity alignItems="center">
-          <Text fontSize={14} fontWeight={'bold'} color="void">
+          <Text fontSize={14} fontWeight={'bold'}>
             Forgot Password?
           </Text>
         </TouchableOpacity>

@@ -57,7 +57,7 @@ const Login = () => {
             height={50}
             width={207}
             alignSelf="center">
-            <Text fontWeight={'bold'} fontSize={20} color="void">
+            <Text fontWeight={'bold'} fontSize={20}>
               Login
             </Text>
           </TouchableOpacity>
@@ -76,7 +76,7 @@ const Login = () => {
             width={207}
             height={50}
             alignSelf="center">
-            <Text fontWeight={'bold'} fontSize={20} color="void">
+            <Text fontWeight={'bold'} fontSize={20}>
               Sign Up
             </Text>
           </TouchableOpacity>

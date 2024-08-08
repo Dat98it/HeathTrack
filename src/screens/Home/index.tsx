@@ -29,12 +29,10 @@ const HomeScreen = () => {
           flexDirection="row"
           alignItems="center">
           <View>
-            <Text fontSize={20} fontWeight="bold" color="void">
+            <Text fontSize={20} fontWeight="bold">
               Hi, Welcome Back
             </Text>
-            <Text fontSize={14} color="void">
-              Hi, Welcome Back
-            </Text>
+            <Text fontSize={14}>Hi, Welcome Back</Text>
           </View>
           <TouchableOpacity
             height={30}
@@ -43,7 +41,7 @@ const HomeScreen = () => {
             justifyContent="center"
             alignItems="center"
             backgroundColor="lightGreen">
-            <NotificationIcon color="void" size={18} />
+            <NotificationIcon size={18} />
           </TouchableOpacity>
         </View>
 
@@ -64,7 +62,7 @@ const HomeScreen = () => {
               borderColor="lightGreen">
               <View flexDirection="row" gap={5} alignItems="center">
                 <TotalBalance />
-                <Text fontSize={12} color="letterAndIcon">
+                <Text fontSize={14} color="letterAndIcon">
                   Total Balance
                 </Text>
               </View>
@@ -77,7 +75,7 @@ const HomeScreen = () => {
             <View flex={1} justifyContent="center" alignItems="center">
               <View flexDirection="row" gap={5} alignItems="center">
                 <TotalExpense />
-                <Text fontSize={12} color="letterAndIcon">
+                <Text fontSize={14} color="letterAndIcon">
                   Total Expense
                 </Text>
               </View>
@@ -96,9 +94,7 @@ const HomeScreen = () => {
             alignItems="center"
             justifyContent="center">
             <CheckIcon />
-            <Text color="void" fontSize={15}>
-              40% of your expenses, looks good.
-            </Text>
+            <Text fontSize={15}>40% of your expenses, looks good.</Text>
           </View>
         </View>
       </View>
@@ -139,11 +135,7 @@ const HomeScreen = () => {
                   alignItems="center">
                   <CarIcon />
                 </View>
-                <Text
-                  fontSize={16}
-                  lineHeight={17}
-                  textAlign="center"
-                  color="void">
+                <Text fontSize={16} lineHeight={17} textAlign="center">
                   {'Savings\nOn Goals'}
                 </Text>
               </View>
@@ -157,9 +149,7 @@ const HomeScreen = () => {
                     <RevenueIcon />
                   </View>
                   <View gap={2} justifyContent="center">
-                    <Text fontSize={14} color="void">
-                      Revenue Last Week
-                    </Text>
+                    <Text fontSize={14}>Revenue Last Week</Text>
                     <Text fontWeight={'bold'} fontSize={15}>
                       $4.000.00
                     </Text>
@@ -174,9 +164,7 @@ const HomeScreen = () => {
                     <FoodIcon />
                   </View>
                   <View gap={2} justifyContent="center">
-                    <Text fontSize={14} color="void">
-                      Food Last Week
-                    </Text>
+                    <Text fontSize={14}>Food Last Week</Text>
                     <Text fontWeight={'bold'} fontSize={15} color="oceanBlue">
                       -$100.00
                     </Text>
@@ -207,9 +195,7 @@ const HomeScreen = () => {
                   backgroundColor={
                     item === activeTab ? 'caribbeanGreen' : undefined
                   }>
-                  <Text fontSize={15} color="void">
-                    {item}
-                  </Text>
+                  <Text fontSize={15}>{item}</Text>
                 </TouchableOpacity>
               ))}
             </View>

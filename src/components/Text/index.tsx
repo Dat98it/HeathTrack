@@ -13,7 +13,7 @@ type Props = TextStyle & {
 export const Text: React.FC<Props> = ({
   numberOfLines,
   children,
-  color,
+  color = 'void',
   ellipsizeMode,
   ...props
 }) => {

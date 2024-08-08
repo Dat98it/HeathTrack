@@ -36,9 +36,7 @@ export const Percentage: React.FC<PercentageProps> = ({percentage}) => {
           backgroundColor="lightGreen"
           justifyContent="center"
           alignItems="flex-end">
-          <Text fontWeight={'bold'} color="void">
-            {100 - percentage}%
-          </Text>
+          <Text fontWeight={'bold'}>{100 - percentage}%</Text>
         </View>
       )}
     </View>

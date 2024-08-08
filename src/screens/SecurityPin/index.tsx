@@ -56,7 +56,6 @@ const SecurityPin = () => {
                   maxLength={1}
                   fontSize={25}
                   textAlign="center"
-                  color="void"
                   keyboardType="number-pad"
                 />
               </View>
@@ -71,7 +70,7 @@ const SecurityPin = () => {
             justifyContent="center"
             alignItems="center"
             borderRadius={30}>
-            <Text color="void" fontWeight="bold" fontSize={20}>
+            <Text fontWeight="bold" fontSize={20}>
               Accept
             </Text>
           </TouchableOpacity>
@@ -83,7 +82,7 @@ const SecurityPin = () => {
             justifyContent="center"
             alignItems="center"
             borderRadius={30}>
-            <Text color="void" fontWeight="bold" fontSize={20}>
+            <Text fontWeight="bold" fontSize={20}>
               Send again
             </Text>
           </TouchableOpacity>

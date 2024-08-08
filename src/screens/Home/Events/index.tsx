@@ -31,9 +31,7 @@ const Item = ({title, time, date, category, amount, icon, type}: any) => {
       </View>
 
       <View flexShrink={1} gap={3}>
-        <Text fontSize={15} color="void">
-          {title}
-        </Text>
+        <Text fontSize={15}>{title}</Text>
         <Text fontSize={12} color="oceanBlue">{`${time} - ${date}`}</Text>
       </View>
 
@@ -46,9 +44,7 @@ const Item = ({title, time, date, category, amount, icon, type}: any) => {
         minHeight={40}
         paddingHorizontal={10}
         width={80}>
-        <Text fontSize={13} color="void">
-          {category}
-        </Text>
+        <Text fontSize={13}>{category}</Text>
       </View>
 
       <View width={80} alignItems="center">

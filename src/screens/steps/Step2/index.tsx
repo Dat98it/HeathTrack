@@ -11,7 +11,7 @@ const Step2 = () => {
       justifyContent="flex-end">
       {/* header */}
       <View flex={1} justifyContent="center" alignItems="center">
-        <Text fontSize={30} fontWeight="bold" color="void" textAlign="center">
+        <Text fontSize={30} fontWeight="bold" textAlign="center">
           {'Are You Ready To\nTake Control Of\nYour Finaces?'}
         </Text>
       </View>
@@ -37,7 +37,7 @@ const Step2 = () => {
           </View>
         </View>
 
-        <Text marginTop={67} fontSize={30} fontWeight={'bold'} color="void">
+        <Text marginTop={67} fontSize={30} fontWeight={'bold'}>
           Next
         </Text>
 
