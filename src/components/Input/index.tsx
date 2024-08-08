@@ -58,7 +58,7 @@ export const Input: React.FC<Props> = ({
         onChangeText={onChangeText}
         style={{
           width: '100%',
-          minHeight: 50,
+          height: 50,
           borderRadius: 20,
           ...(initialPadding && {paddingHorizontal: 24}),
           fontSize: 16,
