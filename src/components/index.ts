@@ -2,3 +2,6 @@ export * from './View';
 export * from './Text';
 export * from './Input';
 export * from './TouchableOpacity';
+export * from './Percentage';
+export * from './HighChart';
+export * from './AppHeader';

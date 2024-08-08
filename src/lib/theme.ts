@@ -25,12 +25,6 @@ export const DefaultTheme = {
       level5: 'rgb(233, 227, 241)', // palette.primary40, alpha 0.14
     },
   },
-  fonts: {
-    regular: 'Poppins-Regular',
-    medium: 'Poppins-Medium',
-    semiBold: 'Poppins-SemiBold',
-    bold: 'Poppins-Bold',
-  },
 };
 
 export type AppTheme = MD3Theme & typeof DefaultTheme;

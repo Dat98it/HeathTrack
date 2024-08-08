@@ -4,14 +4,13 @@ import {
   CheckIcon,
   FoodIcon,
   RevenueIcon,
-  TotalBalance,
-  TotalExpense,
+  TotalBalanceIcon,
+  TotalExpenseIcon,
 } from '@assets/index';
-import {Text, TouchableOpacity, View} from '@components/index';
+import {Percentage, Text, TouchableOpacity, View} from '@components/index';
 import React, {useState} from 'react';
-import {Percentage} from './Percentage';
-import Events from './Events';
 import {ScrollView} from 'react-native';
+import Events from './Events';
 
 const HomeScreen = () => {
   const [activeTab, setActiveTab] = useState<string>('Monthly');
@@ -61,7 +60,7 @@ const HomeScreen = () => {
               borderRightWidth={1}
               borderColor="lightGreen">
               <View flexDirection="row" gap={5} alignItems="center">
-                <TotalBalance />
+                <TotalBalanceIcon />
                 <Text fontSize={14} color="letterAndIcon">
                   Total Balance
                 </Text>
@@ -74,7 +73,7 @@ const HomeScreen = () => {
             {/* Expense */}
             <View flex={1} justifyContent="center" alignItems="center">
               <View flexDirection="row" gap={5} alignItems="center">
-                <TotalExpense />
+                <TotalExpenseIcon />
                 <Text fontSize={14} color="letterAndIcon">
                   Total Expense
                 </Text>

@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import {useAppTheme} from '@hooks/theme';
 import {DefaultTheme} from '@lib/theme';
 import React, {ReactNode} from 'react';
@@ -24,7 +25,7 @@ export const Text: React.FC<Props> = ({
       numberOfLines={numberOfLines}
       ellipsizeMode={ellipsizeMode}
       style={{
-        fontFamily: theme.fonts.regular,
+        fontFamily: 'Poppins-Regular',
         ...(color && {
           color: theme.colors[color] as TextStyle['color'],
         }),
