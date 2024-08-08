@@ -2,7 +2,7 @@ import {Input, Text, TouchableOpacity, View} from '@components/index';
 import React from 'react';
 import {ScrollView} from 'react-native';
 
-export const SignUp = () => {
+const SignUp = () => {
   return (
     <View
       allowInset
@@ -114,3 +114,5 @@ export const SignUp = () => {
     </View>
   );
 };
+
+export default SignUp;

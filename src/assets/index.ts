@@ -14,5 +14,11 @@ export {default as Step1Icon} from './icons/Step1Icon.svg';
 export {default as Step2Icon} from './icons/Step2Icon.svg';
 export {default as AppLogo} from './icons/app-logo.svg';
 export {default as CheckProcessIcon} from './icons/check-process.svg';
+export {default as TotalBalance} from './icons/total-balance.svg';
+export {default as TotalExpense} from './icons/total-expense.svg';
+export {default as CheckIcon} from './icons/check.svg';
+export {default as CarIcon} from './icons/car.svg';
+export {default as FoodIcon} from './icons/food.svg';
+export {default as RevenueIcon} from './icons/revenue.svg';
 
 //image

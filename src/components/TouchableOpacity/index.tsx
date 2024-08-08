@@ -7,18 +7,21 @@ type ViewProps = ViewStyle & {
   children?: ReactNode;
   backgroundColor?: keyof (typeof DefaultTheme)['colors'];
   borderColor?: keyof (typeof DefaultTheme)['colors'];
+  onPress?: () => void;
 };
 
 export const TouchableOpacity: React.FC<ViewProps> = ({
   children,
   backgroundColor,
   borderColor,
+  onPress,
   ...props
 }) => {
   const theme = useAppTheme();
 
   return (
     <RNTouchableOpacity
+      onPress={onPress}
       style={{
         ...(backgroundColor && {
           backgroundColor: theme.colors[

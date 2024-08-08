@@ -15,6 +15,7 @@ export const DefaultTheme = {
     white: '#FFFFFF',
     lightWhite: '#E9F6FE',
     gray: '#4B4544',
+    letterAndIcon: '#093030',
     elevation: {
       level0: 'transparent',
       level1: 'rgb(247, 243, 249)', // palette.primary40, alpha 0.05

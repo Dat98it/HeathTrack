@@ -41,7 +41,6 @@ export const Input: React.FC<Props> = ({
   onChangeText,
   ...props
 }) => {
-  console.log('keyboardType', keyboardType);
   const theme = useAppTheme();
 
   const [isSecureTextEntry, setIsSecureTextEntry] = useState(secureTextEntry);
