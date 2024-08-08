@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 const data = Array.from({length: 20}, (_, i) => ({
   id: i.toString(),
   type: i % 2 === 0 ? 'expense' : 'income',
-  title: `Item ${i + 1}`,
+  title: i % 2 === 0 ? 'Rent' : 'Salary',
   time: '18:27',
   date: 'April 30',
   category: 'Monthly',
@@ -31,13 +31,10 @@ const Item = ({title, time, date, category, amount, icon, type}: any) => {
       </View>
 
       <View flexShrink={1} gap={3}>
-        <Text fontSize={15} fontWeight="bold" color="void">
+        <Text fontSize={15} color="void">
           {title}
         </Text>
-        <Text
-          fontSize={12}
-          color="oceanBlue"
-          fontWeight={'bold'}>{`${time} - ${date}`}</Text>
+        <Text fontSize={12} color="oceanBlue">{`${time} - ${date}`}</Text>
       </View>
 
       <View

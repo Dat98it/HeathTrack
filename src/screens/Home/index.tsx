@@ -139,7 +139,11 @@ const HomeScreen = () => {
                   alignItems="center">
                   <CarIcon />
                 </View>
-                <Text fontSize={17} lineHeight={17} textAlign="center">
+                <Text
+                  fontSize={16}
+                  lineHeight={17}
+                  textAlign="center"
+                  color="void">
                   {'Savings\nOn Goals'}
                 </Text>
               </View>
@@ -153,7 +157,9 @@ const HomeScreen = () => {
                     <RevenueIcon />
                   </View>
                   <View gap={2} justifyContent="center">
-                    <Text fontSize={12}>Revenue Last Week</Text>
+                    <Text fontSize={14} color="void">
+                      Revenue Last Week
+                    </Text>
                     <Text fontWeight={'bold'} fontSize={15}>
                       $4.000.00
                     </Text>
@@ -168,7 +174,9 @@ const HomeScreen = () => {
                     <FoodIcon />
                   </View>
                   <View gap={2} justifyContent="center">
-                    <Text fontSize={12}>Food Last Week</Text>
+                    <Text fontSize={14} color="void">
+                      Food Last Week
+                    </Text>
                     <Text fontWeight={'bold'} fontSize={15} color="oceanBlue">
                       -$100.00
                     </Text>

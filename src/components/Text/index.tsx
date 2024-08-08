@@ -24,6 +24,7 @@ export const Text: React.FC<Props> = ({
       numberOfLines={numberOfLines}
       ellipsizeMode={ellipsizeMode}
       style={{
+        fontFamily: theme.fonts.regular,
         ...(color && {
           color: theme.colors[color] as TextStyle['color'],
         }),
