@@ -1,11 +1,13 @@
 import {Text, View} from '@components/index';
+import {DefaultTheme} from '@lib/theme';
 import React from 'react';
 
 export type PercentageProps = {
   percentage: number;
+  color?: keyof (typeof DefaultTheme)['colors'];
 };
 
-export const Percentage: React.FC<PercentageProps> = ({percentage}) => {
+export const Percentage: React.FC<PercentageProps> = ({percentage, color}) => {
   return (
     <View height={27} flexDirection="row" borderRadius={15}>
       <View
@@ -28,12 +30,12 @@ export const Percentage: React.FC<PercentageProps> = ({percentage}) => {
         <View
           position="absolute"
           top={0}
-          right={0}
+          right={-1}
           borderRadius={15}
           height={27}
           paddingHorizontal={21}
           width={`${100 - percentage}%`}
-          backgroundColor="lightGreen"
+          backgroundColor={color ?? 'lightGreen'}
           justifyContent="center"
           alignItems="flex-end">
           <Text fontWeight={'bold'}>{100 - percentage}%</Text>

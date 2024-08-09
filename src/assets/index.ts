@@ -28,6 +28,7 @@ export {default as TravelIcon} from './icons/Travel';
 export {default as NewHouseIcon} from './icons/NewHouse';
 export {default as CarIcon} from './icons/Car';
 export {default as WeddingIcon} from './icons/Wedding';
+export {default as GoalIconIcon} from './icons/GoalIcon';
 
 export {default as Step1Icon} from './icons/Step1Icon.svg';
 export {default as Step2Icon} from './icons/Step2Icon.svg';

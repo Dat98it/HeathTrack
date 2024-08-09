@@ -1,6 +1,6 @@
 import {Text} from '@components/Text';
 import {View} from '@components/View';
-import React from 'react';
+import React, {ReactNode} from 'react';
 import Svg, {Circle} from 'react-native-svg';
 
 interface CircularProgressProps {
@@ -9,6 +9,7 @@ interface CircularProgressProps {
   progress: number; // progress value between 0 and 1
   color: string;
   backgroundColor: string;
+  content?: ReactNode;
 }
 
 const CircularProgress: React.FC<CircularProgressProps> = ({
@@ -17,6 +18,7 @@ const CircularProgress: React.FC<CircularProgressProps> = ({
   progress,
   color,
   backgroundColor,
+  content,
 }) => {
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
@@ -58,9 +60,11 @@ const CircularProgress: React.FC<CircularProgressProps> = ({
         bottom={0}
         justifyContent="center"
         alignItems="center">
-        <Text color="white" fontSize={20} fontWeight={'bold'}>
-          {(progress * 100).toFixed(0)}%
-        </Text>
+        {content ?? (
+          <Text color="white" fontSize={20} fontWeight={'bold'}>
+            {(progress * 100).toFixed(0)}%
+          </Text>
+        )}
       </View>
     </View>
   );
