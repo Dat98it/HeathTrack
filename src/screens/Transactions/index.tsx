@@ -111,7 +111,6 @@ const TransactionsScreen = () => {
       {/* content */}
       <View
         flexGrow={1}
-        width={'100%'}
         backgroundColor="honeydew"
         borderTopLeftRadius={55}
         borderTopRightRadius={55}

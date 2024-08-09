@@ -15,6 +15,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({title}) => {
 
   return (
     <View
+      width={'100%'}
       justifyContent="space-between"
       flexDirection="row"
       alignItems="center"

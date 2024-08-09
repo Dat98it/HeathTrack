@@ -26,16 +26,16 @@ const CalendarScreen = () => {
       justifyContent="flex-end">
       {/* header */}
       <View
-        flex={1}
         justifyContent="center"
         alignItems="center"
-        paddingHorizontal={38}>
+        paddingHorizontal={38}
+        paddingVertical={37}>
         <AppHeader title="Calender" />
       </View>
 
       {/* content */}
       <View
-        height={'85%'}
+        flex={1}
         backgroundColor="honeydew"
         borderTopLeftRadius={55}
         borderTopRightRadius={55}

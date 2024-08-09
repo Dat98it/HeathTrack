@@ -6,7 +6,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import ListItem from './ListItem';
 import {ScrollView} from 'react-native';
 
-const Notifications = () => {
+const NotificationsScreen = () => {
   const theme = useAppTheme();
 
   return (
@@ -17,7 +17,7 @@ const Notifications = () => {
       justifyContent="flex-end">
       {/* header */}
       <View
-        flex={1}
+        paddingVertical={33}
         flexDirection="row"
         justifyContent="space-between"
         alignItems="center"
@@ -48,8 +48,7 @@ const Notifications = () => {
 
       {/* content */}
       <View
-        height={'85%'}
-        width={'100%'}
+        flexGrow={1}
         backgroundColor="honeydew"
         borderTopLeftRadius={55}
         borderTopRightRadius={55}
@@ -67,4 +66,4 @@ const Notifications = () => {
   );
 };
 
-export default Notifications;
+export default NotificationsScreen;

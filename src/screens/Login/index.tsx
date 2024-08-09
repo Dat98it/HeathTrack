@@ -3,7 +3,7 @@ import {Input, Text, TouchableOpacity, View} from '@components/index';
 import React from 'react';
 import {Dimensions} from 'react-native';
 
-const Login = () => {
+const LoginScreen = () => {
   const dimensionHeight = Dimensions.get('screen').height;
 
   return (
@@ -105,4 +105,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginScreen;

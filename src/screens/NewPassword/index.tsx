@@ -1,6 +1,6 @@
 import {Input, Text, TouchableOpacity, View} from '@components/index';
 import React from 'react';
-const NewPassword: React.FC = () => {
+const NewPasswordScreen: React.FC = () => {
   return (
     <View
       allowInset
@@ -49,7 +49,7 @@ const NewPassword: React.FC = () => {
 
         {/* Footer */}
         <TouchableOpacity
-          width={207}
+          width={'100%'}
           height={45}
           alignSelf="center"
           justifyContent="center"
@@ -57,7 +57,7 @@ const NewPassword: React.FC = () => {
           backgroundColor="caribbeanGreen"
           borderRadius={30}>
           <Text fontSize={20} fontWeight={'bold'}>
-            Sign Up
+            Change Password
           </Text>
         </TouchableOpacity>
       </View>
@@ -65,4 +65,4 @@ const NewPassword: React.FC = () => {
   );
 };
 
-export default NewPassword;
+export default NewPasswordScreen;

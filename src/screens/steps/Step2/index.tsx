@@ -10,7 +10,7 @@ const Step2 = () => {
       flex={1}
       justifyContent="flex-end">
       {/* header */}
-      <View flex={1} justifyContent="center" alignItems="center">
+      <View paddingVertical={63} justifyContent="center" alignItems="center">
         <Text fontSize={30} fontWeight="bold" textAlign="center">
           {'Are You Ready To\nTake Control Of\nYour Finaces?'}
         </Text>
@@ -18,13 +18,14 @@ const Step2 = () => {
 
       {/* content */}
       <View
-        height={'75%'}
+        flexGrow={1}
         justifyContent="center"
         alignItems="center"
         backgroundColor="honeydew"
         borderTopLeftRadius={55}
         borderTopRightRadius={55}
-        paddingHorizontal={25}>
+        paddingHorizontal={25}
+        gap={30}>
         <View
           width={200}
           height={200}
@@ -37,11 +38,11 @@ const Step2 = () => {
           </View>
         </View>
 
-        <Text marginTop={67} fontSize={30} fontWeight={'bold'}>
+        <Text fontSize={30} fontWeight={'bold'}>
           Next
         </Text>
 
-        <View flexDirection="row" gap={16} marginTop={27}>
+        <View flexDirection="row" gap={16}>
           <EllipseIcon />
           <EllipseIcon active />
         </View>

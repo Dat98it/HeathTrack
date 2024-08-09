@@ -10,7 +10,7 @@ const Step1 = () => {
       flex={1}
       justifyContent="flex-end">
       {/* header */}
-      <View flex={1} justifyContent="center" alignItems="center">
+      <View paddingVertical={63} justifyContent="center" alignItems="center">
         <Text fontSize={30} fontWeight="bold" textAlign="center">
           {'Welcome to\nExpense Manager'}
         </Text>
@@ -18,7 +18,7 @@ const Step1 = () => {
 
       {/* content */}
       <View
-        height={'75%'}
+        flexGrow={1}
         justifyContent="center"
         alignItems="center"
         backgroundColor="honeydew"

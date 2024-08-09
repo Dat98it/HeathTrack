@@ -22,17 +22,15 @@ const HomeScreen = () => {
       flex={1}
       justifyContent="flex-end">
       {/* header */}
-      <View flex={1} paddingHorizontal={38} marginTop={10}>
-        <View
-          justifyContent="space-between"
-          flexDirection="row"
-          alignItems="center">
+      <View paddingVertical={32} paddingHorizontal={38} gap={32}>
+        <View justifyContent="space-between" flexDirection="row">
           <View>
             <Text fontSize={20} fontWeight="bold">
               Hi, Welcome Back
             </Text>
             <Text fontSize={14}>Hi, Welcome Back</Text>
           </View>
+
           <TouchableOpacity
             height={30}
             width={30}
@@ -45,43 +43,48 @@ const HomeScreen = () => {
         </View>
 
         {/* Balance */}
-        <View
-          flex={1}
-          gap={15}
-          marginVertical={32}
-          justifyContent="center"
-          paddingHorizontal={22}>
+        <View gap={15} justifyContent="center" paddingHorizontal={22}>
           <View flexDirection="row" justifyContent="center" gap={5}>
             {/* Balance */}
-            <View
-              flex={1}
-              justifyContent="center"
-              alignItems="center"
-              borderRightWidth={1}
-              borderColor="lightGreen">
-              <View flexDirection="row" gap={5} alignItems="center">
-                <TotalBalanceIcon />
-                <Text fontSize={14} color="letterAndIcon">
-                  Total Balance
-                </Text>
-              </View>
-              <Text fontSize={24} fontWeight={'bold'} color="white">
-                $7,783.00
-              </Text>
-            </View>
 
-            {/* Expense */}
-            <View flex={1} justifyContent="center" alignItems="center">
-              <View flexDirection="row" gap={5} alignItems="center">
-                <TotalExpenseIcon />
-                <Text fontSize={14} color="letterAndIcon">
-                  Total Expense
+            {[
+              {
+                title: 'Total Balance',
+                value: '$7,783.00',
+                type: 'total_balance',
+              },
+              {
+                title: 'Total Expense',
+                value: '$1.187.40',
+                type: 'total_expense',
+              },
+            ].map((item, idx) => (
+              <View
+                key={idx}
+                flex={1}
+                justifyContent="center"
+                alignItems="center"
+                borderRightWidth={idx === 1 ? 0 : 1}
+                borderColor="lightGreen">
+                <View flexDirection="row" gap={5} alignItems="center">
+                  {item.type === 'total_balance' ? (
+                    <TotalBalanceIcon />
+                  ) : (
+                    <TotalExpenseIcon />
+                  )}
+                  <Text fontSize={14} color="letterAndIcon">
+                    Total Balance
+                  </Text>
+                </View>
+
+                <Text
+                  fontSize={24}
+                  fontWeight={'bold'}
+                  color={item.type === 'total_balance' ? 'white' : 'oceanBlue'}>
+                  $7,783.00
                 </Text>
               </View>
-              <Text fontSize={24} fontWeight={'bold'} color="oceanBlue">
-                -$1.187.40
-              </Text>
-            </View>
+            ))}
           </View>
 
           {/* Percentage */}
@@ -100,8 +103,7 @@ const HomeScreen = () => {
 
       {/* content */}
       <View
-        height={'70%'}
-        width={'100%'}
+        flexGrow={1}
         backgroundColor="honeydew"
         borderTopLeftRadius={55}
         borderTopRightRadius={55}

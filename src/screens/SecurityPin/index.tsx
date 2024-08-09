@@ -10,7 +10,7 @@ import React from 'react';
 export const range = (n: number): number[] =>
   Array.from({length: n}, (_, i) => i + 1);
 
-const SecurityPin = () => {
+const SecurityPinScreen = () => {
   return (
     <View
       allowInset
@@ -113,4 +113,4 @@ const SecurityPin = () => {
   );
 };
 
-export default SecurityPin;
+export default SecurityPinScreen;

@@ -14,7 +14,11 @@ const SearchScreen = () => {
   return (
     <View allowInset backgroundColor="caribbeanGreen" flex={1}>
       {/* header */}
-      <View flex={1} justifyContent="center" paddingHorizontal={38} gap={15}>
+      <View
+        justifyContent="center"
+        paddingVertical={37}
+        paddingHorizontal={38}
+        gap={15}>
         <AppHeader title="Search" />
 
         <Input
@@ -26,7 +30,7 @@ const SearchScreen = () => {
 
       {/* content */}
       <View
-        height={'80%'}
+        flexGrow={1}
         backgroundColor="honeydew"
         borderTopLeftRadius={55}
         borderTopRightRadius={55}
