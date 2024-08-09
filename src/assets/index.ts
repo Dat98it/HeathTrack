@@ -15,13 +15,22 @@ export {default as TotalExpenseIcon} from './icons/TotalExpenseIcon';
 export {default as NotificationIcon} from './icons/NotificationIcon';
 export {default as RadioIcon} from './icons/RadioIcon';
 export {default as CircularProgress} from './icons/CircularProgress';
+export {default as TransportIcon} from './icons/Transport';
+export {default as MedicineIcon} from './icons/Medicine';
+export {default as SavingsIcon} from './icons/Savings';
+export {default as RentIcon} from './icons/Rent';
+export {default as MoreIcon} from './icons/More';
+export {default as GiftsIcon} from './icons/Gifts';
+export {default as FoodIcon} from './icons/Food';
+export {default as GroceriesIcon} from './icons/Groceries';
+export {default as EntertainmentIcon} from './icons/Entertainment';
+
 export {default as Step1Icon} from './icons/Step1Icon.svg';
 export {default as Step2Icon} from './icons/Step2Icon.svg';
 export {default as AppLogo} from './icons/app-logo.svg';
 export {default as CheckProcessIcon} from './icons/check-process.svg';
 export {default as CheckIcon} from './icons/check.svg';
 export {default as CarIcon} from './icons/car.svg';
-export {default as FoodIcon} from './icons/food.svg';
 export {default as RevenueIcon} from './icons/revenue.svg';
 
 //image

@@ -1,13 +1,6 @@
 import NotificationIcon from '@assets/icons/NotificationIcon';
-import {
-  CarIcon,
-  CheckIcon,
-  FoodIcon,
-  RevenueIcon,
-  TotalBalanceIcon,
-  TotalExpenseIcon,
-} from '@assets/index';
-import {Percentage, Text, TouchableOpacity, View} from '@components/index';
+import {CarIcon, FoodIcon, RevenueIcon} from '@assets/index';
+import {Balancer, Text, TouchableOpacity, View} from '@components/index';
 import React, {useState} from 'react';
 import {ScrollView} from 'react-native';
 import Events from './Events';
@@ -43,62 +36,7 @@ const HomeScreen = () => {
         </View>
 
         {/* Balance */}
-        <View gap={15} justifyContent="center" paddingHorizontal={22}>
-          <View flexDirection="row" justifyContent="center" gap={5}>
-            {/* Balance */}
-
-            {[
-              {
-                title: 'Total Balance',
-                value: '$7,783.00',
-                type: 'total_balance',
-              },
-              {
-                title: 'Total Expense',
-                value: '$1.187.40',
-                type: 'total_expense',
-              },
-            ].map((item, idx) => (
-              <View
-                key={idx}
-                flex={1}
-                justifyContent="center"
-                alignItems="center"
-                borderRightWidth={idx === 1 ? 0 : 1}
-                borderColor="lightGreen">
-                <View flexDirection="row" gap={5} alignItems="center">
-                  {item.type === 'total_balance' ? (
-                    <TotalBalanceIcon />
-                  ) : (
-                    <TotalExpenseIcon />
-                  )}
-                  <Text fontSize={14} color="letterAndIcon">
-                    Total Balance
-                  </Text>
-                </View>
-
-                <Text
-                  fontSize={24}
-                  fontWeight={'bold'}
-                  color={item.type === 'total_balance' ? 'white' : 'oceanBlue'}>
-                  $7,783.00
-                </Text>
-              </View>
-            ))}
-          </View>
-
-          {/* Percentage */}
-          <Percentage percentage={40} />
-
-          <View
-            flexDirection="row"
-            gap={5}
-            alignItems="center"
-            justifyContent="center">
-            <CheckIcon />
-            <Text fontSize={15}>40% of your expenses, looks good.</Text>
-          </View>
-        </View>
+        <Balancer />
       </View>
 
       {/* content */}

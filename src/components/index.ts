@@ -7,3 +7,4 @@ export * from './HighChart';
 export * from './AppHeader';
 export * from './Calendar';
 export * from './EventItem';
+export * from './Balancer';
