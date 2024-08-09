@@ -12,26 +12,16 @@ import Entypo from 'react-native-vector-icons/Entypo';
 
 const SearchScreen = () => {
   return (
-    <View
-      allowInset
-      backgroundColor="caribbeanGreen"
-      flex={1}
-      justifyContent="flex-end">
+    <View allowInset backgroundColor="caribbeanGreen" flex={1}>
       {/* header */}
-      <View
-        flex={1}
-        justifyContent="center"
-        alignItems="center"
-        paddingHorizontal={38}>
+      <View flex={1} justifyContent="center" paddingHorizontal={38} gap={15}>
         <AppHeader title="Search" />
 
-        <View flex={1} width={'100%'}>
-          <Input
-            placeholder="Search..."
-            backgroundColor="lightGreen"
-            height={40}
-          />
-        </View>
+        <Input
+          placeholder="Search..."
+          backgroundColor="lightGreen"
+          height={40}
+        />
       </View>
 
       {/* content */}

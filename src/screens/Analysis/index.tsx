@@ -32,6 +32,7 @@ const AnalysisScreen = () => {
       <View
         flex={1}
         paddingHorizontal={38}
+        paddingBottom={10}
         justifyContent="space-around"
         alignItems="center">
         <AppHeader title="Analysis" />
@@ -137,7 +138,7 @@ const AnalysisScreen = () => {
                 justifyContent="space-between"
                 alignItems="center"
                 paddingHorizontal={29}>
-                <Text>income & Expenses</Text>
+                <Text fontWeight={'bold'}>income & Expenses</Text>
 
                 <View flexDirection="row" gap={4}>
                   {/* Search and calendar icon */}
@@ -211,13 +212,14 @@ const AnalysisScreen = () => {
                     borderRadius={40}
                     justifyContent="center"
                     alignItems="center"
-                    paddingVertical={15}>
+                    paddingVertical={15}
+                    gap={5}>
                     <CircularProgress
                       size={100}
                       strokeWidth={10}
                       progress={0.35} // 75% progress
                       color={theme.colors.oceanBlue}
-                      backgroundColor={theme.colors.lightGreen}
+                      backgroundColor={theme.colors.honeydew}
                     />
 
                     <Text color="white" fontSize={15} fontWeight={'bold'}>

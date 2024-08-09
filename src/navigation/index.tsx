@@ -1,7 +1,7 @@
 import {DefaultTheme} from '@lib/theme';
 import {messages} from '@locale/index';
 import {localeSelector} from '@redux/reducer/locale';
-import CalendarScreen from '@screens/Calender';
+import TransactionsScreen from '@screens/Transactions';
 import React from 'react';
 import {IntlProvider} from 'react-intl';
 import {PaperProvider} from 'react-native-paper';
@@ -15,7 +15,7 @@ export const AppNavigator = () => {
       locale={locale}
       messages={messages[locale as keyof typeof messages]}>
       <PaperProvider theme={DefaultTheme}>
-        <CalendarScreen />
+        <TransactionsScreen />
       </PaperProvider>
     </IntlProvider>
   );

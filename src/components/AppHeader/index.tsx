@@ -15,11 +15,10 @@ export const AppHeader: React.FC<AppHeaderProps> = ({title}) => {
 
   return (
     <View
-      flex={1}
-      width={'100%'}
       justifyContent="space-between"
       flexDirection="row"
-      alignItems="center">
+      alignItems="center"
+      maxHeight={50}>
       <TouchableOpacity
         height={30}
         width={30}
