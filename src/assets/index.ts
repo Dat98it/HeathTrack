@@ -36,5 +36,6 @@ export {default as AppLogo} from './icons/app-logo.svg';
 export {default as CheckProcessIcon} from './icons/check-process.svg';
 export {default as CheckIcon} from './icons/check.svg';
 export {default as RevenueIcon} from './icons/revenue.svg';
+export {default as ProfileAvatar} from './icons/avatar';
 
 //image
