@@ -24,13 +24,16 @@ export {default as GiftsIcon} from './icons/Gifts';
 export {default as FoodIcon} from './icons/Food';
 export {default as GroceriesIcon} from './icons/Groceries';
 export {default as EntertainmentIcon} from './icons/Entertainment';
+export {default as TravelIcon} from './icons/Travel';
+export {default as NewHouseIcon} from './icons/NewHouse';
+export {default as CarIcon} from './icons/Car';
+export {default as WeddingIcon} from './icons/Wedding';
 
 export {default as Step1Icon} from './icons/Step1Icon.svg';
 export {default as Step2Icon} from './icons/Step2Icon.svg';
 export {default as AppLogo} from './icons/app-logo.svg';
 export {default as CheckProcessIcon} from './icons/check-process.svg';
 export {default as CheckIcon} from './icons/check.svg';
-export {default as CarIcon} from './icons/car.svg';
 export {default as RevenueIcon} from './icons/revenue.svg';
 
 //image
