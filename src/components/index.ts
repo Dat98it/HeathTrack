@@ -9,3 +9,4 @@ export * from './Calendar';
 export * from './EventItem';
 export * from './Balancer';
 export * from './HistoryGoal';
+export * from './Modal';

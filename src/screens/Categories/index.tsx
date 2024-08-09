@@ -12,6 +12,8 @@ import {
 import {
   AppHeader,
   Balancer,
+  Input,
+  Modal,
   Text,
   TouchableOpacity,
   View,
@@ -44,6 +46,8 @@ const categories = [
 ];
 
 const CategoriesScreen = () => {
+  const [visible, setVisible] = React.useState(false);
+
   return (
     <View
       allowInset
@@ -80,7 +84,10 @@ const CategoriesScreen = () => {
               const Icon = (iconMap as any)[category.name];
 
               return (
-                <TouchableOpacity key={index} alignItems="center">
+                <TouchableOpacity
+                  key={index}
+                  alignItems="center"
+                  onPress={() => setVisible(true)}>
                   <View
                     width={(Dimensions.get('window').width - 74) / 3 - 10}
                     height={(Dimensions.get('window').width - 74) / 3 - 10}
@@ -99,6 +106,42 @@ const CategoriesScreen = () => {
           </View>
         </View>
       </View>
+
+      {/* modal */}
+      <Modal visible={visible} onRequestClose={() => setVisible(false)}>
+        <View gap={11} alignItems="center">
+          <Text fontSize={20} fontWeight="bold">
+            New Category
+          </Text>
+
+          <Input
+            placeholder="Category Name..."
+            backgroundColor="lightGreen"
+            width={268}
+            color="caribbeanGreen"
+          />
+
+          <TouchableOpacity
+            width={218}
+            height={45}
+            justifyContent="center"
+            alignItems="center"
+            backgroundColor="caribbeanGreen"
+            borderRadius={30}>
+            <Text>Save</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            width={218}
+            height={45}
+            justifyContent="center"
+            alignItems="center"
+            borderRadius={30}
+            backgroundColor="lightGreen">
+            <Text>Cancel</Text>
+          </TouchableOpacity>
+        </View>
+      </Modal>
     </View>
   );
 };

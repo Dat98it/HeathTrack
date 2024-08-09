@@ -3,6 +3,7 @@ import {MD3Theme} from 'react-native-paper';
 export const DefaultTheme = {
   dark: false,
   colors: {
+    transparent: 'transparent',
     honeydew: '#F1FFF3',
     lightGreen: '#DFF7E2',
     caribbeanGreen: '#00D09E',
