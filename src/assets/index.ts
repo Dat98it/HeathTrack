@@ -14,6 +14,7 @@ export {default as TotalBalanceIcon} from './icons/TotalBalanceIcon';
 export {default as TotalExpenseIcon} from './icons/TotalExpenseIcon';
 export {default as NotificationIcon} from './icons/NotificationIcon';
 export {default as RadioIcon} from './icons/RadioIcon';
+export {default as CircularProgress} from './icons/CircularProgress';
 export {default as Step1Icon} from './icons/Step1Icon.svg';
 export {default as Step2Icon} from './icons/Step2Icon.svg';
 export {default as AppLogo} from './icons/app-logo.svg';

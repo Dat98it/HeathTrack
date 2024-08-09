@@ -1,4 +1,9 @@
-import {CheckIcon, TotalBalanceIcon, TotalExpenseIcon} from '@assets/index';
+import {
+  CheckIcon,
+  CircularProgress,
+  TotalBalanceIcon,
+  TotalExpenseIcon,
+} from '@assets/index';
 import {
   AppHeader,
   Percentage,
@@ -8,7 +13,7 @@ import {
 } from '@components/index';
 import {useAppTheme} from '@hooks/theme';
 import React, {useState} from 'react';
-import {ScrollView} from 'react-native';
+import {Dimensions, ScrollView} from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
 import AnalysisChart from './AnalysisChart';
 
@@ -162,7 +167,6 @@ const AnalysisScreen = () => {
             </View>
 
             {/* Balancer */}
-
             <View
               paddingHorizontal={40}
               flexDirection="row"
@@ -184,6 +188,43 @@ const AnalysisScreen = () => {
                 <Text fontSize={20} fontWeight={'bold'} color="oceanBlue">
                   $1.187.40
                 </Text>
+              </View>
+            </View>
+
+            {/* My tartget */}
+
+            <View gap={15}>
+              <Text fontSize={20}>My targets</Text>
+
+              <View
+                flexDirection="row"
+                justifyContent="space-between"
+                flexWrap="wrap"
+                gap={10}>
+                {['Travel', 'Car', 'Grocery'].map((item, index) => (
+                  <View
+                    key={index}
+                    width={(Dimensions.get('screen').width - 74) / 2 - 5}
+                    height={(Dimensions.get('screen').width - 74) / 2 - 5}
+                    minHeight={100}
+                    backgroundColor="lightBlue"
+                    borderRadius={40}
+                    justifyContent="center"
+                    alignItems="center"
+                    paddingVertical={15}>
+                    <CircularProgress
+                      size={100}
+                      strokeWidth={10}
+                      progress={0.35} // 75% progress
+                      color={theme.colors.oceanBlue}
+                      backgroundColor={theme.colors.lightGreen}
+                    />
+
+                    <Text color="white" fontSize={15} fontWeight={'bold'}>
+                      {item}
+                    </Text>
+                  </View>
+                ))}
               </View>
             </View>
           </View>
